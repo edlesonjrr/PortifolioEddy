@@ -1,6 +1,9 @@
 # 🚀 Portfólio | Eddy Junior
 
-![Preview do Projeto](./assets/portifolioSite.png)
+<p align="center">
+  <img src="assets/print.png" alt="Preview do Projeto" width="800">
+</p>
+
 
 > Um portfólio profissional e responsivo, criado para apresentar minhas habilidades como desenvolvedor Frontend e Backend, além de destacar projetos, experiências e formas de contato.
 
