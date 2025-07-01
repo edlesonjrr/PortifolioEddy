@@ -167,3 +167,58 @@ header .grid-layout nav {
         margin-left: 0; /* reseta ajuste do desktop */
     }
 }
+
+
+/* BANDEIRA */
+
+.language-switcher {
+  position: absolute;
+  right: 30px; /* antes era 10px */
+  top: 50%;
+  transform: translateY(-60%);
+}
+
+
+#current-language {
+  background-color: #11111b;
+  border: 2px solid #986dff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.language-options {
+  background-color: #17161d;
+  border: 2px solid #986dff;
+  border-radius: 8px;
+  padding: 8px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 999;
+}
+
+.language-options.hidden {
+  display: none;
+}
+
+.language-options button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.language-options button:hover {
+  background-color: #222;
+  border-radius: 6px;
+}

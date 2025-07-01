@@ -2,18 +2,19 @@ export function hoverChangeDescription(nameCard, text) {
   const changeDescription = document.querySelector(".changeDescription");
   const card = document.querySelector(nameCard);
 
-  if (!changeDescription || !card) {
-    console.warn(`Elemento não encontrado: ${nameCard} ou .changeDescription`);
-    return;
-  }
+  if (!changeDescription || !card) return;
+
+  const fallbackTexts = {
+    pt: "*passe o cursor do mouse no card para ler*",
+    en: "*hover the mouse over the card to read*"
+  };
 
   card.addEventListener("mouseover", () => {
-    console.log(`Hover em ${nameCard}: definindo texto para "${text}"`);
-    changeDescription.innerHTML = text;
+    changeDescription.textContent = text;
   });
 
   card.addEventListener("mouseout", () => {
-    console.log(`Saiu do hover em ${nameCard}`);
-    changeDescription.innerHTML = "*passe o cursor do mouse no card para ler*";
+    const currentLang = localStorage.getItem("lang") || "pt";
+    changeDescription.textContent = fallbackTexts[currentLang] || fallbackTexts.pt;
   });
 }

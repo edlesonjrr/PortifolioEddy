@@ -42,16 +42,38 @@
                 <div class="logo-text">
                     <span class="eddy">EDDY</span><span class="code">CODE</span>
                 </div>
+
                 <ul class="nav-list">
                     <li>
-                        <a href="https://api.whatsapp.com/send/?phone=5581987225748" rel="" target="_blank">
+                        <a id="nav-contact" href="https://api.whatsapp.com/send/?phone=5581987225748" target="_blank">
                             Entrar em contato
                         </a>
                     </li>
                 </ul>
+
+                <div class="language-switcher">
+                    <button id="current-language" aria-label="Selecionar idioma">
+                        <img src="https://flagcdn.com/w40/br.png" alt="Bandeira do Brasil - Português" width="26"
+                            height="18" />
+                    </button>
+                    <div class="language-options hidden">
+                        <button data-lang="en">
+                            <img src="https://flagcdn.com/w40/us.png" alt="Bandeira dos EUA - Inglês" width="26"
+                                height="18" />
+                            Inglês
+                        </button>
+                        <button data-lang="pt">
+                            <img src="https://flagcdn.com/w40/br.png" alt="Bandeira do Brasil - Português" width="26"
+                                height="18" />
+                            Português
+                        </button>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
+
+
 
     <main>
         <!--                                                    ----------------------------Topo do site-----------------------------                              -->
@@ -158,8 +180,8 @@
                                     </li>
 
                                     <li>
-                                        <a href="https://www.linkedin.com/in/edleson-jr-97734b1a0/" rel="noopener" target="_blank"
-                                            aria-label="LinkedIn">
+                                        <a href="https://www.linkedin.com/in/edleson-jr-97734b1a0/" rel="noopener"
+                                            target="_blank" aria-label="LinkedIn">
                                             <svg width="32" height="32" fill="#986dff" viewBox="0 0 24 24"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <title>LinkedIn</title>
@@ -208,7 +230,7 @@
                 <a href="https://github.com/edlesonjrr?tab=repositories" rel="noopener" target="_blank"
                     class="link-repositorio delayExtraBigReveal">
                     Repositórios no GitHub
-                     <i class="	bi bi-hand-index-fill"></i>
+                    <i class="	bi bi-hand-index-fill"></i>
                 </a>
 
             </div><!--interface-->
@@ -312,7 +334,11 @@
     </footer>
 
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
-    <script src="js/main.js" type="module" defer></script> <!-- Corrigido para minúsculas -->
+    <script src="js/main.js" type="module" defer></script>
+    <script src="js/translations.js" type="module"></script>
+    <script src="js/langSwitch.js" type="module" defer></script>
+
+
 
 </body>
 

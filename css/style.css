@@ -277,7 +277,12 @@ section.portfolio .flex {
     cursor: pointer;
     border-radius: 40px;
     position: relative;
+
+    /* Adições para destaque */
+    border: 1px solid #986fdd;
+    box-shadow: 0 0 10px #986fdd80;
 }
+
 
 .img-port:hover {
     background-position: 100% 100%;
