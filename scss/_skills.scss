@@ -1,0 +1,38 @@
+// Exemplo básico
+$gap-1: 8px;
+$gap-2: 16px;
+$gap-3: 24px;
+$gap-4: 32px;
+$gap-5: 48px;
+$gap-6: 96px;
+
+$color-white: #fff;
+$color-gray: #c6c6c6;
+$color-main: #986dff;
+$bg-main: #040615;
+$bg-secondary: #0c0b16;
+$bg-border: #17161f;
+
+@mixin flexbox-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexbox-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive-desktop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin responsive-mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
