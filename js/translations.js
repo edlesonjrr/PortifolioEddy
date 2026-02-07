@@ -22,7 +22,7 @@ export const translations = {
     whoAmI: "Who am I",
     name: "Edleson Junior",
     role: "Frontend Developer & Backend Developer",
-    aboutDesc: "My name is Edleson Junior, but you can call me Eddy! I currently work as an intern at Code3 Tech, and also as a freelance Frontend Developer and UX Designer. I develop modern interfaces focused on performance, animations, responsiveness, and scalability."
+    aboutDesc: "My name is Edleson Junior, or “Eddy” much easier to remember! I hold a degree in Computer Science and currently work as a Web Developer at Code3 Tech. I also work as a freelance Frontend Developer and UX Designer in my spare time. I build modern, high-quality interfaces with a strong focus on performance, animations, responsiveness, and scalability"
   },
   pt: {
     heroTitle: 'CONSTRUINDO SOLUÇÕES DIGITAIS A PARTIR DE IDEIAS BRILHANTES<span style="color:#986fdd">.</span>',
@@ -45,7 +45,7 @@ export const translations = {
     whoAmI: "Quem sou",
     name: "Edleson Junior",
     role: "Frontend Developer & Backend Developer",
-    aboutDesc: "Meu nome é Edleson Junior, ou 'Eddy', bem mais fácil para ficar na memória! Atualmente trabalho como estagiário na empresa Code3 Tech, na área de desenvolvimento Front e Back; também trabalho como freelancer Frontend Developer e UX Designer. Desenvolvo interfaces modernas e de alta qualidade, concentrado em performance, animações, responsividade, e escalabilidade!"
+    aboutDesc: "Meu nome é Edleson Junior, ou 'Eddy', bem mais fácil para ficar na memória! Atualmente formado em Ciência da computação e trabalho como desenvolvedor Web na empresa Code3 Tech, também trabalho como freelancer Frontend Developer e UX Designer nas horas vagas. Desenvolvo interfaces modernas e de alta qualidade, concentrado em performance, animações, responsividade, e escalabilidade!"
   }
 };
 
