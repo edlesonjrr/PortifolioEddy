@@ -1,0 +1,105 @@
+.section-skills {
+  padding: 96px 48px;
+  background-color: #040615;
+  box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+@media screen and (max-width: 992px) {
+  .section-skills {
+    padding: 48px 24px;
+  }
+}
+
+.section-skills .grid-layout .skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 8px;
+}
+
+.section-skills .grid-layout .skills > div,
+.section-skills .grid-layout .skills > article {
+  width: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  .section-skills .grid-layout .skills > div,
+  .section-skills .grid-layout .skills > article {
+    width: 100%;
+  }
+}
+
+.section-skills .skills-text {
+  min-height: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .section-skills .skills-text {
+    min-height: auto;
+  }
+}
+
+.section-skills .skills-text h2 {
+  margin-bottom: 32px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.section-skills .skills-text h2 span {
+  color: #986dff;
+}
+
+.section-skills .skills-text .changeDescription {
+  transition: all 0.5s ease; /* Transição mais suave */
+  max-width: 500px;
+  line-height: 3.2rem;
+  color: #c6c6c6;
+  font-size: 1.2rem;
+}
+
+/* Removido display: none para dispositivos móveis */
+@media screen and (max-width: 768px) {
+  .section-skills .skills-text .changeDescription {
+    display: block; /* Alterado de 'none' para 'block' */
+  }
+}
+
+.section-skills .skills-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+@media screen and (max-width: 1200px) {
+  .section-skills .skills-cards {
+    margin-top: 48px;
+  }
+}
+
+.section-skills .skills-cards article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 20%;
+  flex-grow: 1;
+  height: 130px;
+  background-color: #0c0b16;
+  position: relative;
+  border: 1px solid #17161f;
+  border-radius: 4px;
+  transition: all 1s ease;
+}
+
+.section-skills .skills-cards article:hover {
+  border-color: #986dff;
+}
+
+@media screen and (max-width: 768px) {
+  .section-skills .skills-cards article {
+    width: 40%;
+  }
+}
