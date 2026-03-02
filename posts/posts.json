@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "title": "Como criar um portfólio profissional com HTML, CSS e JavaScript",
+        "excerpt": "Aprenda a construir um portfólio moderno e responsivo do zero, com animações e efeitos 3D usando Three.js.",
+        "date": "2025-01-15",
+        "category": "Frontend",
+        "image": "assets/blog/post-1.webp",
+        "file": "post-1.md"
+    },
+    {
+        "id": "2",
+        "title": "Otimização de performance: Tornando seu site 10x mais rápido",
+        "excerpt": "Descubra técnicas práticas para melhorar a velocidade do seu site, desde compressão de imagens até lazy loading.",
+        "date": "2025-01-20",
+        "category": "Performance",
+        "image": "assets/blog/post-2.webp",
+        "file": "post-2.md"
+    },
+    {
+        "id": "3",
+        "title": "Deploy gratuito na Vercel: Guia completo para iniciantes",
+        "excerpt": "Passo a passo de como hospedar seu site gratuitamente na Vercel com HTTPS, CDN e deploy automático.",
+        "date": "2025-01-25",
+        "category": "Tutorial",
+        "image": "assets/blog/post-3.webp",
+        "file": "post-3.md"
+    },
+    {
+        "id": "4",
+        "title": "Introdução ao Node.js e Express: Construindo APIs RESTful",
+        "excerpt": "Aprenda a criar APIs profissionais do zero usando Node.js e Express, com autenticação JWT e boas práticas.",
+        "date": "2025-02-01",
+        "category": "Backend",
+        "image": "assets/blog/post-4.webp",
+        "file": "post-4.md"
+    },
+    {
+        "id": "5",
+        "title": "Docker para Desenvolvedores: Do Zero ao Deploy",
+        "excerpt": "Domine os conceitos de containers, crie imagens Docker e faça deploy de aplicações em produção com segurança.",
+        "date": "2025-02-08",
+        "category": "DevOps",
+        "image": "assets/blog/post-5.webp",
+        "file": "post-5.md"
+    },
+    {
+        "id": "6",
+        "title": "React Hooks: useState, useEffect e Custom Hooks na prática",
+        "excerpt": "Entenda como funcionam os React Hooks e aprenda a criar seus próprios hooks customizados para reutilizar lógica.",
+        "date": "2025-02-15",
+        "category": "Frontend",
+        "image": "assets/blog/post-6.webp",
+        "file": "post-6.md"
+    }
+]

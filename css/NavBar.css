@@ -1,0 +1,231 @@
+header {
+  padding: 0px 50px;
+  background: #040615;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  will-change: transform;
+  border-bottom: 1px solid #101013;
+  z-index: 999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    padding: 0px 24px;
+  }
+}
+
+header .grid-layout nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 80px;
+  padding: 0px 8px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo-text {
+  font-size: 1.7rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  user-select: none;
+  font-family: "Epilogue", sans-serif;
+  text-transform: uppercase;
+  /* REMOVIDO: margin-left: 317px — era o principal causador do layout quebrado */
+}
+
+.logo-text .eddy {
+  color: #ffffff;
+}
+
+.logo-text .code {
+  color: #986dff;
+}
+
+/* Nav links */
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin: 0;
+  padding: 0;
+  /* REMOVIDO: margin-right: 310px — era o principal causador do layout quebrado */
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list li a {
+  color: #c6c6c6;
+  position: relative;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.nav-list li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -7px;
+  left: 0;
+  background: linear-gradient(270deg, #986dff 0%, #17161d 100%);
+  transform-origin: bottom right;
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.nav-list li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-list li a:hover {
+  color: #fff;
+}
+
+/* Menu mobile toggle */
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 1px;
+  background-color: #fff;
+  margin: 8px;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.nav-list.active {
+  visibility: initial;
+  transition:
+    visibility 0.3s ease,
+    opacity 0.3s ease;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+@media screen and (max-width: 992px) {
+  header .grid-layout nav {
+    height: 70px;
+  }
+
+  .nav-list {
+    text-align: center;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: #0c0b16;
+    flex-direction: column;
+    padding-top: 96px;
+    visibility: hidden;
+    gap: 0;
+  }
+
+  .nav-list li {
+    opacity: 0;
+    margin-bottom: 48px;
+  }
+
+  .nav-list li a {
+    font-size: 2.4rem;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+  }
+}
+
+/* Seletor de idioma / bandeira */
+.language-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* REMOVIDO: position absolute com right fixo — agora é parte natural do flex */
+}
+
+#current-language {
+  background-color: #11111b;
+  border: 2px solid #986dff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.language-options {
+  background-color: #17161d;
+  border: 2px solid #986dff;
+  border-radius: 8px;
+  padding: 8px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 999;
+}
+
+.language-options.hidden {
+  display: none;
+}
+
+.language-options button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.language-options button:hover {
+  background-color: #222;
+  border-radius: 6px;
+}

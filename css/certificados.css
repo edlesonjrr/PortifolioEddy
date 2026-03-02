@@ -1,0 +1,519 @@
+/* Hero */
+.cert-hero {
+    padding: 160px 4% 80px;
+    background-color: #040615;
+    text-align: center;
+}
+
+.cert-hero h1 {
+    font-size: clamp(36px, 5vw, 56px);
+    color: #fff;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.cert-hero h1 span {
+    color: #986dff;
+}
+
+.cert-hero>.interface>p {
+    font-size: 1.2rem;
+    color: #c6c6c6;
+    margin-bottom: 48px;
+}
+
+/* Stats */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    background: rgba(19, 18, 26, 0.5);
+    border: 1px solid rgba(152, 109, 255, 0.2);
+    border-radius: 16px;
+    padding: 32px 24px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-item i {
+    font-size: 48px;
+    color: #986dff;
+    margin-bottom: 16px;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.stat-item p {
+    color: #c6c6c6;
+    font-size: 1rem;
+}
+
+/* Filtros */
+.cert-filters {
+    padding: 0 4% 40px;
+    background-color: #040615;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    background: rgba(19, 18, 26, 0.5);
+    border: 1px solid rgba(152, 109, 255, 0.2);
+    border-radius: 20px;
+    color: #c6c6c6;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filter-btn:hover {
+    border-color: #986dff;
+    background: rgba(152, 109, 255, 0.1);
+    color: #986dff;
+}
+
+.filter-btn.active {
+    background: #986dff;
+    border-color: #986dff;
+    color: #fff;
+}
+
+/* Grid de Certificados */
+.cert-grid {
+    padding: 20px 4% 80px;
+    background-color: #040615;
+    min-height: 60vh;
+}
+
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 80px 20px;
+    color: #986dff;
+}
+
+.loading i {
+    font-size: 48px;
+    animation: spin 1s linear infinite;
+}
+
+.loading p {
+    margin-top: 16px;
+    color: #c6c6c6;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Card de Certificado */
+.cert-card {
+    background: rgba(19, 18, 26, 0.4);
+    border: 1px solid rgba(152, 109, 255, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.cert-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(152, 109, 255, 0.6);
+    box-shadow: 0 16px 48px rgba(152, 109, 255, 0.25);
+}
+
+.cert-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(4, 6, 21, 0.9) 100%);
+}
+
+.cert-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(152, 109, 255, 0.9);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+}
+
+.cert-content {
+    padding: 24px;
+}
+
+.cert-title {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.cert-institution {
+    color: #986dff;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.cert-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid rgba(152, 109, 255, 0.1);
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.cert-date,
+.cert-hours {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Modal */
+.cert-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(4, 6, 21, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.cert-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background: rgba(19, 18, 26, 0.95);
+    border: 1px solid rgba(152, 109, 255, 0.3);
+    border-radius: 20px;
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(152, 109, 255, 0.2);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: #986dff;
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 40px;
+}
+
+.modal-body img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.modal-info h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.modal-info p {
+    color: #c6c6c6;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-verify,
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-verify {
+    background: #986dff;
+    color: #fff;
+}
+
+.btn-verify:hover {
+    background: #7c52d1;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(152, 109, 255, 0.4);
+}
+
+.btn-download {
+    background: rgba(152, 109, 255, 0.1);
+    border: 1px solid rgba(152, 109, 255, 0.3);
+    color: #986dff;
+}
+
+.btn-download:hover {
+    background: rgba(152, 109, 255, 0.2);
+    border-color: #986dff;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .cert-hero {
+        padding: 120px 4% 60px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .certs-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .modal-body {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+
+    .modal-close {
+        top: 12px;
+        right: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-buttons {
+        overflow-x: auto;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .filter-buttons::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+}
+
+/* Skeleton Loader - ADICIONAR */
+.skeleton-loader {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(19, 18, 26, 0.8) 25%,
+            rgba(152, 109, 255, 0.15) 50%,
+            rgba(19, 18, 26, 0.8) 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Cert Image - OTIMIZADO */
+.cert-image {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    will-change: background-image;
+}
+
+/* Modal Actions - SEM DOWNLOAD */
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-verify {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+    background: #986dff;
+    color: #fff;
+}
+
+.btn-verify:hover {
+    background: #7c52d1;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(152, 109, 255, 0.4);
+}
+
+/* Modal Image - OTIMIZADO */
+.modal-body img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    object-fit: contain;
+    max-height: 600px;
+    background: #0d0c14;
+}
+
+/* Performance - GPU Acceleration */
+.cert-card,
+.cert-image,
+.skeleton-loader {
+    will-change: transform, opacity;
+}
+
+/* Mobile - Otimizações */
+@media (max-width: 768px) {
+    .cert-image {
+        height: 200px;
+    }
+
+    .modal-body img {
+        max-height: 400px;
+    }
+
+    /* Previne reflow */
+    .cert-card {
+        contain: layout style paint;
+    }
+}
+
+@media (max-width: 480px) {
+    .cert-image {
+        height: 180px;
+    }
+
+    .skeleton-loader {
+        animation-duration: 1.2s;
+    }
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

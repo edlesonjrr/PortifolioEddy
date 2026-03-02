@@ -1,0 +1,479 @@
+/* ============================================
+   POPUP DE PROJETOS — popup.css
+   ============================================ */
+
+/* Botão "Ver mais projetos" */
+.btn-ver-projetos {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 0;
+  font-size: 1.2rem;
+  color: #986dff;
+  font-weight: 500;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Epilogue", sans-serif;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-ver-projetos:focus {
+  outline: none;
+}
+
+.btn-ver-projetos::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -7px;
+  left: 0;
+  background: linear-gradient(270deg, #986dff 0%, #17161d 100%);
+  transform-origin: bottom right;
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btn-ver-projetos:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.btn-ver-projetos i {
+  font-size: 1.3rem;
+  animation: blinkColor 1.6s infinite ease-in-out;
+}
+
+.portfolio-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  margin-top: 60px;
+}
+
+/* ============================================
+   OVERLAY + POPUP
+   ============================================ */
+
+.projetos-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 6, 21, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.projetos-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.projetos-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -48%) scale(0.96);
+  width: min(92vw, 1100px);
+  max-height: 85vh;
+  background: #13121a;
+  border: 1px solid #262636;
+  border-radius: 20px;
+  z-index: 9001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.projetos-popup.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Header do popup */
+.projetos-popup__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 36px 20px;
+  border-bottom: 1px solid #262636;
+  flex-shrink: 0;
+}
+
+.projetos-popup__header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.projetos-popup__header h2 span {
+  color: #986dff;
+}
+
+.projetos-popup__close {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #262636;
+  background: transparent;
+  color: #c6c6c6;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-family: "Epilogue", sans-serif;
+}
+
+.projetos-popup__close:hover {
+  border-color: #986dff;
+  color: #986dff;
+  transform: rotate(90deg);
+}
+
+/* Corpo com scroll */
+.projetos-popup__body {
+  overflow-y: auto;
+  padding: 32px 36px;
+  flex: 1;
+  scrollbar-width: thin;
+  scrollbar-color: #986dff #13121a;
+}
+
+.projetos-popup__body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.projetos-popup__body::-webkit-scrollbar-track {
+  background: #13121a;
+}
+
+.projetos-popup__body::-webkit-scrollbar-thumb {
+  background: #986dff;
+  border-radius: 6px;
+}
+
+/* Grid 2 colunas desktop */
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Card de projeto */
+.projeto-card {
+  background: #0c0b16;
+  border: 1px solid #262636;
+  border-radius: 16px;
+  overflow: hidden;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.projeto-card:hover {
+  border-color: rgba(152, 109, 255, 0.5);
+  transform: translateY(-4px);
+}
+
+/* Imagem do projeto */
+.projeto-card__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border-bottom: 1px solid #262636;
+}
+
+/* Conteúdo */
+.projeto-card__content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.projeto-card__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Tags de tecnologia */
+.projeto-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.projeto-tag {
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(152, 109, 255, 0.12);
+  border: 1px solid rgba(152, 109, 255, 0.3);
+  color: #986dff;
+  font-size: 0.78rem;
+  font-weight: 500;
+  font-family: "Epilogue", sans-serif;
+}
+
+.projeto-card__desc {
+  font-size: 0.95rem;
+  color: #c6c6c6;
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* Botões do card */
+.projeto-card__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.projeto-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: "Epilogue", sans-serif;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.projeto-btn--deploy {
+  background: #986dff;
+  color: #fff;
+}
+
+.projeto-btn--deploy:hover {
+  background: #7c52d1;
+  box-shadow: 0 0 12px rgba(152, 109, 255, 0.4);
+}
+
+.projeto-btn--github {
+  background: transparent;
+  color: #c6c6c6;
+  border: 1px solid #262636;
+}
+
+.projeto-btn--github:hover {
+  border-color: #986dff;
+  color: #fff;
+}
+
+/* ============================================
+   RESPONSIVO
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+  .btn-ver-projetos {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .portfolio-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .projetos-popup {
+    width: 95vw;
+    max-height: 90vh;
+    top: 50%;
+  }
+
+  .projetos-popup__header {
+    padding: 20px 20px 16px;
+  }
+
+  .projetos-popup__header h2 {
+    font-size: 1.2rem;
+  }
+
+  .projetos-popup__body {
+    padding: 20px;
+  }
+
+  /* 1 coluna no mobile */
+  .projetos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .projeto-card__img {
+    height: 160px;
+  }
+
+  .projeto-card__actions {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projetos-popup__header h2 {
+    font-size: 1.1rem;
+  }
+
+  .projeto-card__title {
+    font-size: 1.1rem;
+  }
+
+  .projeto-btn {
+    font-size: 0.83rem;
+    padding: 7px 14px;
+  }
+}
+
+/* ============================================
+   ANIMAÇÃO DE ENTRADA DOS CARDS DO POPUP
+   ============================================ */
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.projeto-card {
+  opacity: 0;
+}
+
+.projeto-card.animate {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.projeto-card.animate:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.projeto-card.animate:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.projeto-card.animate:nth-child(3) {
+  animation-delay: 0.25s;
+}
+.projeto-card.animate:nth-child(4) {
+  animation-delay: 0.35s;
+}
+.projeto-card.animate:nth-child(5) {
+  animation-delay: 0.45s;
+}
+.projeto-card.animate:nth-child(6) {
+  animation-delay: 0.55s;
+}
+.projeto-card.animate:nth-child(7) {
+  animation-delay: 0.65s;
+}
+.projeto-card.animate:nth-child(8) {
+  animation-delay: 0.75s;
+}
+.projeto-card.animate:nth-child(9) {
+  animation-delay: 0.75s;
+}
+.projeto-card.animate:nth-child(10) {
+  animation-delay: 0.75s;
+}
+
+/* ============================================
+   FILTROS DO POPUP
+   ============================================ */
+
+.projetos-filtros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 36px;
+  border-bottom: 1px solid #262636;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1px solid #262636;
+  background: transparent;
+  color: #c6c6c6;
+  font-size: 0.88rem;
+  font-weight: 500;
+  font-family: "Epilogue", sans-serif;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.filtro-btn:hover {
+  border-color: #986dff;
+  color: #fff;
+}
+
+.filtro-btn.active {
+  background: #986dff;
+  border-color: #986dff;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(152, 109, 255, 0.35);
+}
+
+/* Card oculto pelo filtro */
+.projeto-card.hidden-filter {
+  display: none;
+}
+
+/* Mensagem "nenhum resultado" */
+.filtro-empty {
+  display: none;
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: #c6c6c6;
+  font-size: 1rem;
+}
+
+.filtro-empty.visible {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .projetos-filtros {
+    padding: 14px 16px;
+    gap: 8px;
+  }
+
+  .filtro-btn {
+    padding: 7px 14px;
+    font-size: 0.82rem;
+  }
+}

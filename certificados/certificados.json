@@ -1,0 +1,72 @@
+[
+    {
+        "id": "1",
+        "title": "Bacharelado em Ciência da Computação",
+        "institution": "Uninassau",
+        "category": "Graduação",
+        "date": "2025-12-15",
+        "hours": 3200,
+        "image": "certificados/images/cert-1.webp",
+        "verifyUrl": "https://diplomadigital.certeduc.com/04986320000113/"
+    },
+    {
+        "id": "2",
+        "title": "Docker: Criando e Gerenciando Containers",
+        "institution": "Alura",
+        "category": "DevOps",
+        "date": "2025-05-29",
+        "hours": 10,
+        "image": "certificados/images/cert-2.webp",
+        "verifyUrl": "https://cursos.alura.com.br/user/edleson-junior/course/docker-criando-gerenciando-containers/certificate"
+    },
+    {
+        "id": "3",
+        "title": "HTTP: Entendendo a Web por Baixo dos Panos",
+        "institution": "Alura",
+        "category": "Backend",
+        "date": "2025-05-30",
+        "hours": 10,
+        "image": "certificados/images/cert-3.webp",
+        "verifyUrl": "https://cursos.alura.com.br/user/edleson-junior/course/http-entendendo-web-por-baixo-dos-panos/certificate"
+    },
+    {
+        "id": "4",
+        "title": "Power BI Desktop: Construindo meu Primeiro Dashboard",
+        "institution": "Alura",
+        "category": "Dados",
+        "date": "2025-03-28",
+        "hours": 8,
+        "image": "certificados/images/cert-4.webp",
+        "verifyUrl": "https://cursos.alura.com.br/user/edleson-junior/course/power-bi-desktop-construindo-meu-primeiro-dashboard/certificate"
+    },
+    {
+        "id": "5",
+        "title": "Microsoft AZ-900 Parte 1: Azure Fundamentals",
+        "institution": "Alura",
+        "category": "Cloud",
+        "date": "2025-02-06",
+        "hours": 8,
+        "image": "certificados/images/cert-5.webp",
+        "verifyUrl": "https://cursos.alura.com.br/user/edleson-junior/course/Microsoft-az-900-parte-1-azure-fundamentals/certificate"
+    },
+    {
+        "id": "6",
+        "title": "Python: Crie a sua Primeira Aplicação",
+        "institution": "Alura",
+        "category": "Backend",
+        "date": "2024-09-25",
+        "hours": 8,
+        "image": "certificados/images/cert-6.webp",
+        "verifyUrl": "https://cursos.alura.com.br/user/edleson-junior/course/python-crie-sua-primeira-aplicacao/certificate"
+    },
+    {
+        "id": "7",
+        "title": "UML: Modelagem de Soluções",
+        "institution": "Alura",
+        "category": "Engenharia",
+        "date": "2024-09-20",
+        "hours": 8,
+        "image": "certificados/images/cert-7.webp",
+        "verifyUrl": "https://cursos.alura.com.br/user/edleson-junior/course/introducao-a-uml/certificate"
+    }
+]

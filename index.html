@@ -1,0 +1,1427 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#986DFF" />
+  <meta name="copyright" content="Edleson Junior 2025" />
+  <meta http-equiv="content-language" content="pt-br" />
+
+  <!-- SEO básico -->
+  <meta name="description"
+    content="Portfólio de Edleson Junior — Desenvolvedor Web Full-Stack especializado em React, Next.js e interfaces modernas." />
+
+  <!-- Preload da imagem crítica do hero (carrega antes de tudo) -->
+  <link rel="preload" as="image" href="assets/eddyPortifolio3.webp" />
+
+  <!-- Preconnect para fontes (antes dos links de font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fontes otimizadas — só os pesos usados, Poppins removida -->
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon_E.png" />
+
+  <!-- Bootstrap Icons via CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+  <!-- CSS do projeto -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/hero-2.css" />
+  <link rel="stylesheet" href="css/skills.css" />
+  <link rel="stylesheet" href="css/NavBar.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/models.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+  <link rel="stylesheet" href="css/popup.css" />
+  <link rel="stylesheet" href="css/timeline.css" />
+  <link rel="stylesheet" href="css/chatbot.css" />
+  <link rel="stylesheet" href="css/pricing.css" />
+  <link rel="stylesheet" href="css/testimonials.css" />
+  <link rel="stylesheet" href="css/blog-cta.css" />
+
+  <script src="js/svg-inject.min.js"></script>
+  <title>Portfólio | Eddy Code</title>
+</head>
+
+<body>
+  <div class="scroll-progress-bar"></div>
+
+  <header>
+    <div class="grid-layout">
+      <nav>
+        <div class="logo-text">
+          <span class="eddy">EDDY</span><span class="code">CODE</span>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <a id="nav-contact" href="https://api.whatsapp.com/send/?phone=5581987225748" target="_blank">Entrar em
+              contato</a>
+          </li>
+        </ul>
+        <div class="language-switcher">
+          <button id="current-language" aria-label="Selecionar idioma">
+            <img src="https://flagcdn.com/w40/br.png" alt="Bandeira do Brasil - Português" width="26" height="18" />
+          </button>
+          <div class="language-options hidden">
+            <button data-lang="en">
+              <img src="https://flagcdn.com/w40/us.png" alt="Bandeira dos EUA - Inglês" width="26" height="18" />
+              Inglês
+            </button>
+            <button data-lang="pt">
+              <img src="https://flagcdn.com/w40/br.png" alt="Bandeira do Brasil - Português" width="26" height="18" />
+              Português
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="topo-do-site">
+      <div class="interface">
+        <div class="flex">
+          <div class="txt-topo-site">
+            <h1>
+              CONSTRUINDO SOLUÇÕES DIGITAIS A PARTIR DE IDEIAS BRILHANTES<span>.</span>
+            </h1>
+            <p class="typewriter"></p>
+            <div class="btn-contato">
+              <button class="btn-ver-precos">Ver preços</button>
+              <a href="assets/EdlesonCv.pdf" download><button class="btn-cv">Download CV</button></a>
+            </div>
+
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <span class="metric-value" data-target="15" data-prefix="+" data-suffix=""
+                  data-duration="1600">+0</span>
+                <span class="metric-label">Projetos entregues</span>
+              </div>
+              <div class="metric-divider"></div>
+              <div class="metric-item">
+                <span class="metric-value" data-target="98" data-prefix="" data-suffix="" data-duration="2000">0</span>
+                <span class="metric-label">Performance Score</span>
+              </div>
+              <div class="metric-divider"></div>
+              <div class="metric-item">
+                <span class="metric-value" data-target="1" data-prefix="" data-suffix="+" data-duration="1200">0</span>
+                <span class="metric-label">Anos de experiência</span>
+              </div>
+            </div>
+          </div>
+          <div class="img-topo-site">
+            <img src="assets/eddyPortifolio3.webp" alt="EddyStudioGhi" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING MODAL -->
+    <div class="pricing-overlay" role="dialog" aria-modal="true" aria-label="Serviços e preços">
+      <div class="pricing-modal">
+        <button class="pricing-close" aria-label="Fechar">
+          <i class="bi bi-x-lg"></i>
+        </button>
+
+        <div class="pricing-header">
+          <span class="pricing-tag">// freelance.services</span>
+          <h2>Serviços & <span>Investimento</span></h2>
+          <p>
+            Escolha o pacote ideal para seu projeto. Entrega rápida, qualidade
+            premium.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- LANDING PAGE -->
+          <div class="pricing-card">
+            <div class="pricing-icon">
+              <i class="bi bi-lightning-charge-fill"></i>
+            </div>
+            <div class="pricing-name">Landing Page</div>
+            <div class="pricing-price">
+              <span class="pricing-from">a partir de</span>
+              <div class="pricing-value"><sup>R$</sup>800</div>
+            </div>
+            <div class="pricing-deadline">
+              <i class="bi bi-clock"></i> 5 a 10 dias
+            </div>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Design moderno e
+                responsivo
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>1 página estratégica
+              </li>
+              <li><i class="bi bi-check-circle-fill"></i>SEO básico</li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Performance otimizada
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Integração com WhatsApp
+              </li>
+              <li><i class="bi bi-check-circle-fill"></i>Deploy na Vercel</li>
+            </ul>
+            <button class="pricing-cta" data-package="landing">
+              Solicitar este projeto
+            </button>
+          </div>
+
+          <!-- SITE INSTITUCIONAL — DESTAQUE -->
+          <div class="pricing-card featured">
+            <span class="badge-popular">⭐ Mais escolhido</span>
+            <div class="pricing-icon"><i class="bi bi-globe2"></i></div>
+            <div class="pricing-name">Site Institucional</div>
+            <div class="pricing-price">
+              <span class="pricing-from">a partir de</span>
+              <div class="pricing-value"><sup>R$</sup>1.800</div>
+            </div>
+            <div class="pricing-deadline">
+              <i class="bi bi-clock"></i> 10 a 20 dias
+            </div>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li><i class="bi bi-check-circle-fill"></i>Até 5 páginas</li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Layout personalizado
+              </li>
+              <li><i class="bi bi-check-circle-fill"></i>SEO inicial</li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Integração com
+                formulário
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Painel simples
+                (opcional)
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Deploy e config de
+                domínio
+              </li>
+            </ul>
+            <button class="pricing-cta" data-package="institucional">
+              Solicitar este projeto
+            </button>
+          </div>
+
+          <!-- E-COMMERCE -->
+          <div class="pricing-card">
+            <div class="pricing-icon">
+              <i class="bi bi-bag-check-fill"></i>
+            </div>
+            <div class="pricing-name">E-commerce</div>
+            <div class="pricing-price">
+              <span class="pricing-from">a partir de</span>
+              <div class="pricing-value"><sup>R$</sup>3.500</div>
+            </div>
+            <div class="pricing-deadline">
+              <i class="bi bi-clock"></i> 20 a 35 dias
+            </div>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Catálogo de produtos
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Integração de pagamento
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Carrinho e checkout
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Painel administrativo
+              </li>
+              <li><i class="bi bi-check-circle-fill"></i>SEO básico</li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>Deploy configurado
+              </li>
+            </ul>
+            <button class="pricing-cta" data-package="ecommerce">
+              Solicitar este projeto
+            </button>
+          </div>
+        </div>
+
+        <p class="pricing-note">
+          Precisa de algo diferente?
+          <a href="https://api.whatsapp.com/send/?phone=5581987225748&text=Olá!%20Vim%20pelo%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20personalizado."
+            target="_blank" rel="noopener noreferrer">Fale diretamente no WhatsApp</a>
+          para um orçamento personalizado.
+        </p>
+      </div>
+    </div>
+    <!-- FIM PRICING MODAL -->
+
+    <script src="js/pricingModal.js" defer></script>
+
+    <section class="especiliadades">
+      <div class="interface">
+        <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+        <div class="flex">
+          <div class="especialidades-box">
+            <i class="bi bi-code-square"></i>
+            <h3>Website</h3>
+            <p>
+              Criação de sites modernos, rápidos e responsivos com foco em
+              performance, acessibilidade e usabilidade.
+            </p>
+          </div>
+          <div class="especialidades-box">
+            <i class="bi bi-cart"></i>
+            <h3>Loja online</h3>
+            <p>
+              Desenvolvimento de e-commerces eficientes e otimizados para
+              conversão, integrados com plataformas de pagamento.
+            </p>
+          </div>
+          <div class="especialidades-box">
+            <i class="bi bi-window"></i>
+            <h3>Landing Page</h3>
+            <p>
+              Criação de landing pages estratégicas e atrativas com foco em
+              captação de leads, campanhas e lançamentos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre">
+      <div class="interface">
+        <div class="grid-layout">
+          <div>
+            <div id="creator-photo" class="delayMediumReveal" data-bg="/assets/eddyAbout.webp">
+              <h3 class="delayExtraBigReveal">#OpenToWork</h3>
+            </div>
+            <div class="text-content">
+              <h4 class="delayMediumReveal">Quem sou</h4>
+              <h2 class="delaySmallReveal">Edleson Junior</h2>
+              <h3 class="delayMediumReveal">
+                Frontend Developer & Backend Developer
+              </h3>
+              <p class="delayLargeReveal">
+                Meu nome é Edleson Junior, ou 'Eddy', bem mais fácil para
+                ficar na memória! Atualmente formado em Ciência da computação
+                e trabalho como desenvolvedor Web na empresa Code3 Tech,
+                também trabalho como freelancer Frontend Developer e UX
+                Designer nas horas vagas. Desenvolvo interfaces modernas e de
+                alta qualidade, concentrado em performance, animações,
+                responsividade, e escalabilidade!
+              </p>
+              <nav class="delayLargeReveal">
+                <ul class="iconeAbout">
+                  <li>
+                    <a href="https://www.instagram.com/edlesonjrr" rel="noopener" target="_blank"
+                      aria-label="Instagram">
+                      <svg width="35" height="35" fill="#986dff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>Instagram</title>
+                        <path
+                          d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm4.25 3.25a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm4.75-.25a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0Z" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/edleson-jr-97734b1a0/" rel="noopener" target="_blank"
+                      aria-label="LinkedIn">
+                      <svg width="32" height="32" fill="#986dff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>LinkedIn</title>
+                        <path
+                          d="M20.447 20.452h-3.554v-5.569c0-1.328-.026-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.939v5.667H9.352V9h3.413v1.561h.049c.476-.9 1.637-1.852 3.372-1.852 3.604 0 4.269 2.37 4.269 5.451v6.292zM5.337 7.433c-1.144 0-2.068-.926-2.068-2.066C3.27 4.222 4.193 3.3 5.337 3.3c1.142 0 2.066.922 2.066 2.067 0 1.14-.924 2.066-2.066 2.066zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.225.792 24 1.771 24h20.451C23.2 24 24 23.225 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/edlesonjrr" rel="noopener" target="_blank" aria-label="GitHub">
+                      <svg width="32" height="32" fill="#986dff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>GitHub</title>
+                        <path
+                          d="M12 0C5.371 0 0 5.373 0 12.01c0 5.303 3.438 9.8 8.207 11.387.6.113.793-.26.793-.577v-2.234c-3.338.727-4.033-1.614-4.033-1.614-.546-1.388-1.333-1.757-1.333-1.757-1.089-.745.082-.73.082-.73 1.205.086 1.838 1.24 1.838 1.24 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.762-1.604-2.665-.306-5.467-1.335-5.467-5.93 0-1.31.465-2.381 1.235-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.654 1.653.243 2.873.12 3.176.77.839 1.232 1.91 1.232 3.22 0 4.609-2.807 5.62-5.479 5.92.43.371.823 1.104.823 2.226v3.293c0 .319.192.694.801.576C20.565 21.805 24 17.311 24 12.01 24 5.373 18.627 0 12 0z" />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!-- Botão trajetória — adicione logo APÓS </section> do sobre -->
+        <div class="sobre-trajetoria-link">
+          <button class="btn-trajetoria">
+            <span class="traj-label">Ver minha trajetória</span>
+            <span class="traj-icon"><i class="bi bi-rocket-takeoff-fill"></i></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPUP TRAJETÓRIA -->
+    <div class="timeline-overlay"></div>
+    <div class="timeline-popup">
+      <div class="timeline-popup__header">
+        <div class="timeline-popup__header-left">
+          <span class="timeline-popup__tag">// career.log</span>
+          <h2>MINHA <span>TRAJETÓRIA.</span></h2>
+        </div>
+        <button class="timeline-popup__close" aria-label="Fechar">✕</button>
+      </div>
+
+      <div class="timeline-popup__body">
+        <ol class="timeline">
+          <li class="tl-item">
+            <div class="tl-card">
+              <span class="tl-year">2022</span>
+              <h3>🎓 Início na Ciência da Computação</h3>
+              <p>
+                Ingressei no curso de Ciência da Computação na UNINASSAU, onde
+                tive meu primeiro contato formal com lógica de programação,
+                algoritmos e estruturas de dados.
+              </p>
+              <span class="tl-tag">UNINASSAU</span>
+            </div>
+            <div class="tl-center">
+              <div class="tl-node">🎓</div>
+            </div>
+            <div class="tl-empty"></div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-empty"></div>
+            <div class="tl-center">
+              <div class="tl-node">💡</div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-year">2023</span>
+              <h3>💡 Primeiros Projetos Web</h3>
+              <p>
+                Desenvolvi meus primeiros projetos com HTML, CSS e JavaScript.
+                Descobri a paixão pelo frontend e comecei a explorar design de
+                interfaces.
+              </p>
+              <span class="tl-tag">HTML · CSS · JS</span>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-card">
+              <span class="tl-year">2023.2</span>
+              <h3>🚀 Entrada no React e Next.js</h3>
+              <p>
+                Mergulhei no ecossistema React, aprendi componentização, hooks
+                e state management. Next.js abriu as portas para projetos mais
+                robustos e escaláveis.
+              </p>
+              <span class="tl-tag">React · Next.js · TypeScript</span>
+            </div>
+            <div class="tl-center">
+              <div class="tl-node">🚀</div>
+            </div>
+            <div class="tl-empty"></div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-empty"></div>
+            <div class="tl-center">
+              <div class="tl-node">💼</div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-year">2024</span>
+              <h3>💼 Estágio na Kode3 Tech</h3>
+              <p>
+                Ingressei como estagiário terceirizado para Farmácias APP
+                (FAPP) uma multinacional, onde trabalhei com equipes ágeis,
+                code review, Git em produção e entrega de projetos reais para
+                clientes.
+              </p>
+              <span class="tl-tag">Kode3 Tech · Agile · Git</span>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-card">
+              <span class="tl-year">2024.2</span>
+              <h3>🛒 Primeiros Freelances</h3>
+              <p>
+                Comecei a atender clientes como freelancer — landing pages,
+                lojas virtuais e sites institucionais. Aprendi a gerir prazos,
+                expectativas e entregar qualidade.
+              </p>
+              <span class="tl-tag">Freelancer · UX · Clientes</span>
+            </div>
+            <div class="tl-center">
+              <div class="tl-node">🛒</div>
+            </div>
+            <div class="tl-empty"></div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-empty"></div>
+            <div class="tl-center">
+              <div class="tl-node">🧠</div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-year">2025</span>
+              <h3>🧠 Primeiro Projeto com Three.js</h3>
+              <p>
+                Explorei o universo 3D na web com Three.js — criei modelos
+                interativos, animações de partículas e experiências imersivas
+                que elevaram o nível dos meus portfólios.
+              </p>
+              <span class="tl-tag">Three.js · WebGL · 3D</span>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-card">
+              <span class="tl-year">2025.2</span>
+              <h3>🎓 Formado em Ciência da Computação</h3>
+              <p>
+                Concluí a graduação com projetos práticos e um TCC focado em
+                desenvolvimento web. Base sólida em algoritmos, banco de dados
+                e engenharia de software.
+              </p>
+              <span class="tl-tag">Graduação · Concluído</span>
+            </div>
+            <div class="tl-center">
+              <div class="tl-node">🎓</div>
+            </div>
+            <div class="tl-empty"></div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-empty"></div>
+            <div class="tl-center">
+              <div class="tl-node">⚡</div>
+            </div>
+            <div class="tl-card">
+              <span class="tl-year">2026</span>
+              <h3>⚡ Desenvolvedor Full-Stack na Kode3</h3>
+              <p>
+                Efetivado como desenvolvedor Web na Kode3 Tech. Hoje atuo no
+                desenvolvimento full-stack, como desenvolvedor Junior e
+                aprendendo a cada dia mais!
+              </p>
+              <span class="tl-tag">Full-Stack · Kode3 Tech · 2025</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <!-- FIM POPUP TRAJETÓRIA -->
+
+    <section class="portfolio">
+      <div class="interface">
+        <h2 class="titulo">MEU <span>PORTFÓLIO.</span></h2>
+        <div class="flex">
+          <div class="img-port" data-bg="/assets/Kode3Tech.webp">
+            <div class="overlay">Sites</div>
+          </div>
+          <div class="img-port" data-bg="/assets/draAmandaSite.webp">
+            <div class="overlay">Lading Pages</div>
+          </div>
+          <div class="img-port" data-bg="/assets/oneUpSite.webp">
+            <div class="overlay">E-commerces</div>
+          </div>
+        </div>
+        <div class="portfolio-links">
+          <a href="https://github.com/edlesonjrr?tab=repositories" rel="noopener" target="_blank"
+            class="link-repositorio delayExtraBigReveal">
+            Repositórios no GitHub <i class="bi bi-hand-index-fill"></i>
+          </a>
+          <button class="btn-ver-projetos delayExtraBigReveal">
+            Ver mais projetos <i class="bi bi-grid-fill"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="modelos-3d">
+      <div class="interface">
+        <h2 class="titulo">MODELOS <span>3D.</span></h2>
+        <div class="modelos-grid">
+          <div class="modelo-card" id="modelo-carro">
+            <div class="modelo-canvas" data-model="carro"></div>
+            <h3>BMW M340i</h3>
+          </div>
+          <div class="modelo-card" id="modelo-cubo">
+            <div class="modelo-canvas" data-model="rubiks_cube"></div>
+            <h3>Rubik's Cube</h3>
+          </div>
+          <div class="modelo-card" id="modelo-computador">
+            <div class="modelo-canvas" data-model="Bullpup_Rifle"></div>
+            <h3>Bullpup Rifle</h3>
+          </div>
+        </div>
+        <p class="modelos-instrucao">Use o mouse para girar os objetos 3D</p>
+      </div>
+    </section>
+
+    <section class="section-skills">
+      <div class="interface">
+        <h2 class="titulo">MEUS <span>CONHECIMENTOS.</span></h2>
+        <br /><br /><br />
+        <div class="grid-layout">
+          <div class="skills">
+            <article class="skills-text">
+              <h2 class="delaySmallReveal">Conhecimentos <span>.</span></h2>
+              <p class="delayMediumReveal changeDescription">
+                *passe o cursor do mouse no card para ler*
+              </p>
+            </article>
+            <div class="skills-cards">
+              <article class="html intervalCardReveal">
+                <img src="assets/icons/html.svg" alt="Ícone do HTML" width="60" height="60" />
+              </article>
+              <article class="css intervalCardReveal">
+                <img src="assets/icons/css.svg" alt="Ícone do CSS" width="60" height="60" />
+              </article>
+              <article class="js intervalCardReveal">
+                <img src="assets/icons/javascript.svg" alt="Ícone do JavaScript" width="60" height="60" />
+              </article>
+              <article class="sass intervalCardReveal">
+                <img src="assets/icons/sass.svg" alt="Ícone do Sass" width="60" height="60" />
+              </article>
+              <article class="react intervalCardReveal">
+                <img src="assets/icons/react.svg" alt="Ícone do React" width="60" height="60" />
+              </article>
+              <article class="next intervalCardReveal">
+                <img src="assets/icons/next.svg" alt="Ícone do Next.js" width="60" height="60" />
+              </article>
+              <article class="styled intervalCardReveal">
+                <img src="assets/icons/styled-components.svg" alt="Ícone do Styled Components" width="60" height="60" />
+              </article>
+              <article class="tailwind intervalCardReveal">
+                <img src="assets/icons/tailwindcss.svg" alt="Ícone do Tailwind" width="60" height="60" />
+              </article>
+              <article class="typescript intervalCardReveal">
+                <img src="assets/icons/typescript.svg" alt="Ícone do TypeScript" width="60" height="60" />
+              </article>
+              <article class="git intervalCardReveal">
+                <img src="https://cdn.simpleicons.org/git/986dff" alt="Ícone do Git" width="60" height="60" />
+              </article>
+              <article class="docker intervalCardReveal">
+                <img src="https://cdn.simpleicons.org/docker/986dff" alt="Ícone do Docker" width="60" height="60" />
+              </article>
+              <article class="gitlab intervalCardReveal">
+                <img src="https://cdn.simpleicons.org/gitlab/986dff" alt="Ícone DevOps (GitLab)" width="60"
+                  height="60" />
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SEÇÃO DEPOIMENTOS -->
+  <section class="section-testimonials">
+    <div class="testimonials-header">
+      <span class="testimonials-tag">// EDDY CODE</span>
+      <h2>Minhas<span> avaliações</span></h2>
+      <p>Experiências reais de clientes e parceiros.</p>
+    </div>
+
+    <div class="testimonials-track-wrapper">
+      <div class="testimonials-track">
+        <!-- 9 CARDS ORIGINAIS -->
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">AM</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Ana Martins</div>
+              <div class="testimonial-role">Cliente — Landing Page</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            O Eddy entregou minha landing page em menos de uma semana. Design
+            moderno, rápido e exatamente o que eu precisava. Super recomendo!
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">RC</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Rafael Costa</div>
+              <div class="testimonial-role">Cliente — E-commerce</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            Minha loja online ficou incrível! Integração com pagamento
+            funcionando perfeitamente. O Edleson foi extremamente atencioso
+            durante todo o processo.
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">JS</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">João Silva</div>
+              <div class="testimonial-role">Parceiro — Dev Frontend</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            Trabalhei em parceria com o Eddy em um projeto React. Código
+            limpo, organizado e entrega pontual. Um dos melhores devs que já
+            vi em ação.
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">PL</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Patricia Lima</div>
+              <div class="testimonial-role">Cliente — Site Institucional</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            Meu site ficou muito acima das expectativas. Responsivo, rápido e
+            com uma identidade visual que combina perfeitamente com minha
+            marca.
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">MO</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Marcos Oliveira</div>
+              <div class="testimonial-role">Cliente — Landing Page</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+          </div>
+          <p class="testimonial-text">
+            Ótima comunicação durante o projeto. A página converteu muito mais
+            do que a anterior. Com certeza voltarei para novos projetos.
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">CF</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Camila Ferreira</div>
+              <div class="testimonial-role">Parceira — UX Designer</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            O Eddy tem um olhar apurado para UX além do desenvolvimento.
+            Transforma os designs com fidelidade e ainda sugere melhorias.
+            Parceiro incrível!
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">LR</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Lucas Ramos</div>
+              <div class="testimonial-role">Cliente — E-commerce</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            Excelente profissional! Entregou minha loja antes do prazo, com
+            painel administrativo fácil de usar e tudo funcionando
+            perfeitamente.
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">BS</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Beatriz Santos</div>
+              <div class="testimonial-role">Cliente — Site Institucional</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            Profissionalismo do início ao fim. O resultado superou minhas
+            expectativas e os clientes sempre elogiam o site. Muito obrigada,
+            Eddy!
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">TN</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Thiago Nunes</div>
+              <div class="testimonial-role">Parceiro — Dev Fullstack</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            Cara com domínio técnico sério. Vimos juntos desafios complexos em
+            React e Node.js e o Eddy sempre encontrou a melhor solução. Top
+            demais!
+          </p>
+        </div>
+
+        <!-- DUPLICATAS para loop infinito perfeito -->
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">AM</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Ana Martins</div>
+              <div class="testimonial-role">Cliente — Landing Page</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            O Eddy entregou minha landing page em menos de uma semana. Design
+            moderno, rápido e exatamente o que eu precisava. Super recomendo!
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">RC</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Rafael Costa</div>
+              <div class="testimonial-role">Cliente — E-commerce</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            Minha loja online ficou incrível! Integração com pagamento
+            funcionando perfeitamente. O Edleson foi extremamente atencioso
+            durante todo o processo.
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">JS</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">João Silva</div>
+              <div class="testimonial-role">Parceiro — Dev Frontend</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            Trabalhei em parceria com o Eddy em um projeto React. Código
+            limpo, organizado e entrega pontual. Um dos melhores devs que já
+            vi em ação.
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">PL</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Patricia Lima</div>
+              <div class="testimonial-role">Cliente — Site Institucional</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            Meu site ficou muito acima das expectativas. Responsivo, rápido e
+            com uma identidade visual que combina perfeitamente com minha
+            marca.
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">MO</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Marcos Oliveira</div>
+              <div class="testimonial-role">Cliente — Landing Page</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+          </div>
+          <p class="testimonial-text">
+            Ótima comunicação durante o projeto. A página converteu muito mais
+            do que a anterior. Com certeza voltarei para novos projetos.
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">CF</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Camila Ferreira</div>
+              <div class="testimonial-role">Parceira — UX Designer</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            O Eddy tem um olhar apurado para UX além do desenvolvimento.
+            Transforma os designs com fidelidade e ainda sugere melhorias.
+            Parceiro incrível!
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">LR</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Lucas Ramos</div>
+              <div class="testimonial-role">Cliente — E-commerce</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            Excelente profissional! Entregou minha loja antes do prazo, com
+            painel administrativo fácil de usar e tudo funcionando
+            perfeitamente.
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">BS</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Beatriz Santos</div>
+              <div class="testimonial-role">Cliente — Site Institucional</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            Profissionalismo do início ao fim. O resultado superou minhas
+            expectativas e os clientes sempre elogiam o site. Muito obrigada,
+            Eddy!
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-top">
+            <div class="testimonial-avatar">TN</div>
+            <div class="testimonial-info">
+              <div class="testimonial-name">Thiago Nunes</div>
+              <div class="testimonial-role">Parceiro — Dev Fullstack</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+              class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text">
+            Cara com domínio técnico sério. Vimos juntos desafios complexos em
+            React e Node.js e o Eddy sempre encontrou a melhor solução. Top
+            demais!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTÕES -->
+    <div class="testimonials-actions">
+      <a href="#" class="btn-testimonials-primary">
+        <i class="bi bi-journal-text"></i> Ver mais avaliações
+      </a>
+      <a href="https://www.reclameaqui.com.br" target="_blank" rel="noopener noreferrer"
+        class="btn-testimonials-secondary">
+        <i class="bi bi-shield-check"></i> Reclame Aqui
+      </a>
+    </div>
+  </section>
+  <!-- FIM SEÇÃO DEPOIMENTOS -->
+
+  <!-- SEÇÃO BLOG CTA -->
+  <section class="section-blog-cta">
+    <!-- Canvas partículas — só desktop via JS -->
+    <canvas class="blog-cta-particles" style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          pointer-events: none;
+        "></canvas>
+
+    <div class="blog-cta-inner">
+      <!-- FOTO — só desktop via CSS -->
+      <div class="blog-cta-photo">
+        <img src="assets/eddyPortifolio3.webp" alt="Edleson Junior" width="340" height="400" />
+      </div>
+
+      <!-- CONTEÚDO -->
+      <div class="blog-cta-content">
+        <span class="blog-cta-tag">// eddy.blog</span>
+
+        <h2 class="blog-cta-title">
+          Quer ir <span>além do portfólio?</span>
+        </h2>
+
+        <p class="blog-cta-subtitle">
+          Explore conteúdos exclusivos que mostram minha evolução, projetos
+          reais e conhecimento técnico em profundidade.
+        </p>
+
+        <ul class="blog-cta-list">
+          <li>
+            <i class="bi bi-check-circle-fill"></i> Artigos técnicos sobre
+            desenvolvimento web
+          </li>
+          <li>
+            <i class="bi bi-check-circle-fill"></i> Estudos de caso reais
+          </li>
+          <li>
+            <i class="bi bi-check-circle-fill"></i> Avaliações detalhadas de
+            projetos
+          </li>
+          <li>
+            <i class="bi bi-check-circle-fill"></i> Certificados e formações
+          </li>
+          <li>
+            <i class="bi bi-check-circle-fill"></i> Conteúdos sobre Three.js,
+            performance e UX
+          </li>
+        </ul>
+
+        <a href="blog.html" class="btn-blog-cta">
+          Acessar Eddy Blog <i class="bi bi-arrow-right"></i>
+        </a>
+
+        <p class="blog-cta-note">
+          Página em desenvolvimento — em breve novos conteúdos
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- FIM BLOG CTA -->
+
+  <!-- POPUP DE PROJETOS -->
+  <div class="projetos-overlay"></div>
+  <div class="projetos-popup">
+    <div class="projetos-popup__header">
+      <h2>MAIS <span>PROJETOS.</span></h2>
+      <button class="projetos-popup__close" aria-label="Fechar">✕</button>
+    </div>
+
+    <!-- FILTROS -->
+    <!-- Para categorizar um card, use data-category="front" | "back" | "fullstack" -->
+    <div class="projetos-filtros">
+      <button class="filtro-btn active" data-filter="all">Todos</button>
+      <button class="filtro-btn" data-filter="front">Front-End</button>
+      <button class="filtro-btn" data-filter="back">Back-End</button>
+      <button class="filtro-btn" data-filter="fullstack">Front + Back</button>
+    </div>
+
+    <div class="projetos-popup__body">
+      <div class="projetos-grid">
+        <!-- data-category="front" | "back" | "fullstack" -->
+
+        <div class="projeto-card" data-category="fullstack">
+          <img class="projeto-card__img" src="assets/projetos/projeto1.webp" alt="Weather" loading="lazy" />
+          <div class="projeto-card__content">
+            <h3 class="projeto-card__title">Weather App</h3>
+            <div class="projeto-card__tags">
+              <span class="projeto-tag">Javascript</span>
+              <span class="projeto-tag">HTML</span>
+              <span class="projeto-tag">CSS</span>
+              <span class="projeto-tag">Firebase</span>
+              <span class="projeto-tag">Node</span>
+            </div>
+            <p class="projeto-card__desc">
+              A WeatherApp é um aplicativo web simples para consultar o clima
+              em tempo real, utilizando dados de uma API meteorológica. Este
+              projeto foi desenvolvido para fins de aprendizado e prática de
+              desenvolvimento web e CI/CD.
+            </p>
+            <div class="projeto-card__actions">
+              <a href="https://weather-app-pink-nine-85.vercel.app" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--deploy"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
+              <a href="https://github.com/edlesonjrr/WeatherApp" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--github"><i class="bi bi-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-category="fullstack">
+          <img class="projeto-card__img" src="assets/projetos/projeto2.webp" alt="Feitosa" loading="lazy" />
+          <div class="projeto-card__content">
+            <h3 class="projeto-card__title">Feitosa Elegance</h3>
+            <div class="projeto-card__tags">
+              <span class="projeto-tag">Html</span>
+              <span class="projeto-tag">JavaScript</span>
+              <span class="projeto-tag">CSS</span>
+              <span class="projeto-tag">Node</span>
+              <span class="projeto-tag">SCSS</span>
+            </div>
+            <p class="projeto-card__desc">
+              Feitosa Elegance é um projeto em desenvolvimento de um site de
+              vendas para uma loja. A proposta é oferecer uma interface
+              elegante e funcional, com estrutura organizada e modularizada,
+              facilitando manutenção e escalabilidade.
+            </p>
+            <div class="projeto-card__actions">
+              <a href="https://feitosa-elegance.vercel.app" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--deploy"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
+              <a href="https://github.com/edlesonjrr/FeitosaElegance" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--github"><i class="bi bi-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-category="fullstack">
+          <img class="projeto-card__img" src="assets/projetos/projeto3.webp" alt="Blog" loading="lazy" />
+          <div class="projeto-card__content">
+            <h3 class="projeto-card__title">Blog funcional</h3>
+            <div class="projeto-card__tags">
+              <span class="projeto-tag">Html</span>
+              <span class="projeto-tag">Css</span>
+              <span class="projeto-tag">Javascript</span>
+              <span class="projeto-tag">Feth API</span>
+              <span class="projeto-tag">Node</span>
+              <span class="projeto-tag">PostgreSQL</span>
+              <span class="projeto-tag">Docker</span>
+              <span class="projeto-tag">Grafana</span>
+              <span class="projeto-tag">Cloud</span>
+            </div>
+            <p class="projeto-card__desc">
+              Um blog completo criado do zero, com frontend moderno, backend
+              em Node.js + Express, PostgreSQL, e stack completa de
+              monitoramento.
+            </p>
+            <div class="projeto-card__actions">
+              <a href="https://blog-tan-eight-61.vercel.app" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--deploy"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
+              <a href="https://github.com/edlesonjrr/Blog" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--github"><i class="bi bi-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-category="fullstack">
+          <img class="projeto-card__img" src="assets/projetos/projeto4.webp" alt="Login" loading="lazy" />
+          <div class="projeto-card__content">
+            <h3 class="projeto-card__title">Tela de login e cadastro</h3>
+            <div class="projeto-card__tags">
+              <span class="projeto-tag">Html</span>
+              <span class="projeto-tag">CSS</span>
+              <span class="projeto-tag">Javascript</span>
+              <span class="projeto-tag">Node</span>
+              <span class="projeto-tag">Firebase</span>
+            </div>
+            <p class="projeto-card__desc">
+              Tela de login e cadastro desenvolvida com linguagens de
+              marcação, Html e Css, Javascript como forma de interação, e
+              Firebase como banco de dados temporário. Interface utilizado em
+              outros projetos.
+            </p>
+            <div class="projeto-card__actions">
+              <a href="https://mentoriakode.netlify.app" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--deploy"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
+              <a href="https://github.com/edlesonjrr/MentoriaKode3" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--github"><i class="bi bi-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-category="front">
+          <img class="projeto-card__img" src="assets/projetos/projeto5.png" alt="YasminP" />
+          <div class="projeto-card__content">
+            <h3 class="projeto-card__title">Portifólio Social Media</h3>
+            <div class="projeto-card__tags">
+              <span class="projeto-tag">Html</span>
+              <span class="projeto-tag">Css</span>
+              <span class="projeto-tag">Javascript</span>
+            </div>
+            <p class="projeto-card__desc">
+              LadingPage feita para Yasmin Labanca, Videomaker e social midia!
+              Criado com ferramentas simples, como linguagens de marcação
+              padrão Html e Css, e como interatividade com o usuário o
+              Javascript.
+            </p>
+            <div class="projeto-card__actions">
+              <a href="https://yasminlabanca.vercel.app" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--deploy"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
+              <a href="https://github.com/edlesonjrr/YasminPortifolio" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--github"><i class="bi bi-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-category="fullstack">
+          <img class="projeto-card__img" src="assets/projetos/projeto6.webp" alt="Bibliotech" loading="lazy" />
+          <div class="projeto-card__content">
+            <h3 class="projeto-card__title">Bibliotech</h3>
+            <div class="projeto-card__tags">
+              <span class="projeto-tag">Vite</span>
+              <span class="projeto-tag">Tailwind Css</span>
+              <span class="projeto-tag">TypeScript</span>
+              <span class="projeto-tag">ESLint</span>
+              <span class="projeto-tag">PostCSS</span>
+              <span class="projeto-tag">Hook Form</span>
+            </div>
+            <p class="projeto-card__desc">
+              Leitura Fácil Manager é uma aplicação frontend desenvolvida com
+              Vite, TypeScript, Tailwind CSS e outras tecnologias modernas,
+              focada em fornecer uma interface leve, modular e eficiente.
+            </p>
+            <div class="projeto-card__actions">
+              <a href="https://bibliotech-orpin.vercel.app" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--deploy"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
+              <a href="https://github.com/edlesonjrr/Bibliotech" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--github"><i class="bi bi-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-category="front">
+          <img class="projeto-card__img" src="assets/projetos/projeto7.webp" alt="AmandaP" loading="lazy" />
+          <div class="projeto-card__content">
+            <h3 class="projeto-card__title">Landing Page Dentista</h3>
+            <div class="projeto-card__tags">
+              <span class="projeto-tag">Html</span>
+              <span class="projeto-tag">CSS</span>
+              <span class="projeto-tag">Javascript</span>
+            </div>
+            <p class="projeto-card__desc">
+              Projeto desenvolvido para Dra Amanda Maylla, com propósito de
+              divulgar seu trabalho como forma de Lading Page, e foi criado
+              com ferramentas simples de marcação, e Javascript como
+              interatividade com o usuário.
+            </p>
+            <div class="projeto-card__actions">
+              <a href="https://dra-amandamaylla.vercel.app" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--deploy"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
+              <a href="https://github.com/edlesonjrr/DraAmanda" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--github"><i class="bi bi-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-category="front">
+          <img class="projeto-card__img" src="assets/projetos/projeto8.webp" alt="Optmize" loading="lazy" />
+          <div class="projeto-card__content">
+            <h3 class="projeto-card__title">Optimize Empresa</h3>
+            <div class="projeto-card__tags">
+              <span class="projeto-tag">Html</span>
+              <span class="projeto-tag">Css</span>
+              <span class="projeto-tag">Javascript</span>
+            </div>
+            <p class="projeto-card__desc">
+              Projeto em desenvolvimento, para empresa de Otimização de
+              imagens com IA. Que foi criado com ferramentas simples de
+              marcação, e Javascript como interatividade com o usuário.
+            </p>
+            <div class="projeto-card__actions">
+              <a href="https://optimize-project.vercel.app" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--deploy"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
+              <a href="https://github.com/edlesonjrr/OptimizeProject" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--github"><i class="bi bi-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-category="front">
+          <img class="projeto-card__img" src="assets/projetos/projeto9.webp" alt="AmandaP" loading="lazy" />
+          <div class="projeto-card__content">
+            <h3 class="projeto-card__title">Projeto Love</h3>
+            <div class="projeto-card__tags">
+              <span class="projeto-tag">Html</span>
+              <span class="projeto-tag">CSS</span>
+              <span class="projeto-tag">Javascript</span>
+            </div>
+            <p class="projeto-card__desc">
+              Projeto desenvolvido para fins de teste de algumas habilidades
+              em front-end. Uma carta simples de lembrança, para usar com sua
+              amada(o) com uma simples contagem regressiva!
+            </p>
+            <div class="projeto-card__actions">
+              <a href="https://project-girlfriend.vercel.app" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--deploy"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
+              <a href="https://github.com/edlesonjrr/ProjectGirlfriend" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--github"><i class="bi bi-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="projeto-card" data-category="back">
+          <img class="projeto-card__img" src="assets/projetos/projeto10.webp" alt="AmandaP" loading="lazy" />
+          <div class="projeto-card__content">
+            <h3 class="projeto-card__title">PeidaBot</h3>
+            <div class="projeto-card__tags">
+              <span class="projeto-tag">Node</span>
+              <span class="projeto-tag">yt-dlp</span>
+              <span class="projeto-tag">FFmpeg</span>
+              <span class="projeto-tag">DiscordJs</span>
+            </div>
+            <p class="projeto-card__desc">
+              PeidaBot é um bot de música para Discord desenvolvido em
+              Node.js, focado em funcionar de verdade. Ele utiliza yt-dlp +
+              FFmpeg para contornar limitações do YouTube e garantir
+              reprodução estável de áudio em chamadas de voz.
+            </p>
+            <div class="projeto-card__actions">
+              <a href="https://github.com/edlesonjrr/PeidaBot" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--deploy"><i class="bi bi-box-arrow-up-right"></i> Deploy</a>
+              <a href="https://github.com/edlesonjrr/PeidaBot" target="_blank" rel="noopener"
+                class="projeto-btn projeto-btn--github"><i class="bi bi-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="chatbot-float" aria-label="Abrir chat">🤖</button>
+
+  <!-- CHATBOT -->
+  <div class="chatbot-overlay"></div>
+  <div class="chatbot-popup">
+    <div class="chatbot-header">
+      <div class="chatbot-avatar">🤖</div>
+      <div class="chatbot-header-info">
+        <h4>EddyBot</h4>
+        <span>Online agora</span>
+      </div>
+      <button class="chatbot-close" aria-label="Fechar">✕</button>
+    </div>
+
+    <p class="chatbot-aviso">
+      <i class="bi bi-info-circle-fill"></i>
+      Sou um bot simples com respostas pré-programadas. Para dúvidas
+      específicas, fale diretamente com o Edleson pelo WhatsApp!
+    </p>
+
+    <div class="chatbot-messages">
+      <div class="chat-msg bot">
+        <div class="chat-msg__avatar">🤖</div>
+        <div class="chat-msg__bubble">
+          Olá! 👋 Sou o <strong>EddyBot</strong>. Escolha uma opção abaixo ou
+          digite sua dúvida!
+        </div>
+      </div>
+    </div>
+
+    <div class="chatbot-input-area">
+      <input class="chatbot-input" type="text" placeholder="Digite sua pergunta..." autocomplete="off" />
+      <button class="chatbot-send"><i class="bi bi-send-fill"></i></button>
+    </div>
+  </div>
+  <!-- FIM CHATBOT -->
+
+  <a href="https://api.whatsapp.com/send/?phone=5581987225748&text=Olá!%20Vim%20pelo%20seu%20portfólio%20e%20gostaria%20de%20conversar"
+    class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale comigo no WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <button class="scroll-to-top" aria-label="Voltar ao topo">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <footer class="site-footer">
+    <div class="grid-layout">
+      <div class="footer-brand">
+        <span class="footer-logo">EDDY<span>CODE</span></span>
+        <p class="footer-cnpj">CNPJ: 62.720.337/0001-20</p>
+      </div>
+
+      <p class="footer-copy">
+        © 2025 <a href="#">EDDYCODE</a>. Todos os direitos reservados.
+      </p>
+
+      <div class="footer-powered">
+        <p>
+          Powered by
+          <a href="https://api.whatsapp.com/send/?phone=5581987225748" target="_blank" rel="noopener"
+            style="color: #986fdd">EDDYCODE</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Three.js e dependências — defer para não bloquear renderização -->
+  <script src="js/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js" defer></script>
+
+  <!-- Hero 3D — dependem do Three.js, ficam com defer também -->
+  <script src="js/hero-particles.js" defer></script>
+  <script src="js/hero-glow.js" defer></script>
+  <script src="js/hero-metrics.js" defer></script>
+  <script src="js/hero-parallax.js" defer></script>
+  <script src="js/hero-scroll.js" defer></script>
+  <script src="js/hero-inactivity.js" defer></script>
+
+  <!-- ScrollReveal — defer -->
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+
+  <!-- Módulos — já têm defer -->
+  <script src="js/main.js" type="module" defer></script>
+  <script src="js/models-3d.js" defer></script>
+  <script src="js/translations.js" type="module" defer></script>
+  <script src="js/langSwitch.js" type="module" defer></script>
+
+  <!-- Scripts restantes — defer -->
+  <script src="js/mobile.js" defer></script>
+  <script src="js/portfolio-desktop.js" defer></script>
+  <script src="js/popup.js" defer></script>
+  <script src="js/timeline.js" defer></script>
+  <script src="js/chatbot.js" defer></script>
+  <script src="js/lazy-bg.js" defer></script>
+  <script src="js/pricingModal.js" defer></script>
+  <script src="js/testimonials.js" defer></script>
+  <script src="js/blog-cta.js" defer></script>
+</body>
+
+</html>

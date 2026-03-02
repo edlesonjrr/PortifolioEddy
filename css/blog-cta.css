@@ -1,0 +1,531 @@
+/* ============================================
+   BLOG CTA SECTION — blog-cta.css
+   ============================================ */
+
+.section-blog-cta {
+  padding: 80px 4%;
+  background-color: #040615;
+  box-shadow: 0 0 40px 10px #ffffff1d;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+/* Glow de fundo decorativo */
+.section-blog-cta::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(152, 109, 255, 0.07) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blog-cta-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.34, 1.4, 0.64, 1);
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  text-align: left;
+}
+
+.blog-cta-inner.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FOTO HERO — só desktop */
+.blog-cta-photo {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  align-self: flex-end;
+}
+
+.blog-cta-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 40px rgba(152, 109, 255, 0.3));
+  animation: blogFloat 3s ease-in-out infinite alternate;
+  max-height: 480px;
+  object-fit: contain;
+}
+
+@keyframes blogFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(18px);
+  }
+}
+
+/* Glow atrás da foto */
+.blog-cta-photo::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(
+    ellipse,
+    rgba(152, 109, 255, 0.35) 0%,
+    transparent 70%
+  );
+  filter: blur(32px);
+  z-index: -1;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* CONTEÚDO */
+.blog-cta-content {
+  flex: 1;
+}
+
+/* TAG */
+.blog-cta-tag {
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #986dff;
+  background: rgba(152, 109, 255, 0.1);
+  border: 1px solid rgba(152, 109, 255, 0.25);
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+/* TÍTULO */
+.blog-cta-title {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.blog-cta-title span {
+  color: #986dff;
+}
+
+/* SUBTÍTULO */
+.blog-cta-subtitle {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+/* LISTA DE ITENS — pills elegantes */
+.blog-cta-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 48px;
+  padding: 0;
+  list-style: none;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  justify-content: flex-start;
+}
+
+.blog-cta-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #bbb;
+  background: rgba(152, 109, 255, 0.07);
+  border: 1px solid rgba(152, 109, 255, 0.18);
+  border-radius: 50px;
+  padding: 7px 16px;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.blog-cta-list li:hover {
+  background: rgba(152, 109, 255, 0.14);
+  border-color: rgba(152, 109, 255, 0.35);
+  color: #fff;
+}
+
+.blog-cta-list li i {
+  color: #986dff;
+  font-size: 0.78rem;
+}
+
+/* BOTÃO CTA */
+.btn-blog-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 44px;
+  background: #986dff;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+  box-shadow: 0 8px 32px rgba(152, 109, 255, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-blog-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.btn-blog-cta:hover {
+  background: #7c4dff;
+  box-shadow: 0 12px 48px rgba(152, 109, 255, 0.5);
+  transform: scale(1.05) translateY(-2px);
+}
+
+.btn-blog-cta i {
+  font-size: 1.1rem;
+  transition: transform 0.25s ease;
+}
+
+.btn-blog-cta:hover i {
+  transform: translateX(4px);
+}
+
+/* NOTA DISCRETA */
+.blog-cta-note {
+  margin-top: 20px;
+  font-size: 0.78rem;
+  color: #444;
+}
+
+/* ============================================
+   RESPONSIVO
+   ============================================ */
+
+@media screen and (max-width: 1024px) {
+  .blog-cta-inner {
+    gap: 48px;
+  }
+
+  .blog-cta-photo {
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-blog-cta {
+    padding: 80px 6%;
+  }
+
+  .blog-cta-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+
+  /* Esconde foto e partículas no mobile */
+  .blog-cta-photo {
+    display: none;
+  }
+  .blog-cta-particles {
+    display: none;
+  }
+
+  .blog-cta-list {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .blog-cta-subtitle {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .btn-blog-cta {
+    width: 100%;
+    justify-content: center;
+    padding: 15px 32px;
+  }
+
+  .blog-cta-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ============================================
+   BLOG.HTML — Estilos exclusivos
+   ============================================ */
+
+/* NAVBAR BLOG */
+.blog-header {
+  padding: 0 50px;
+  background: #040615;
+  border-bottom: 1px solid #101013;
+  z-index: 999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
+.blog-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.blog-nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-nav-links li a {
+  color: #c6c6c6;
+  font-size: 1rem;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.blog-nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -6px;
+  left: 0;
+  background: linear-gradient(270deg, #986dff 0%, #17161d 100%);
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.blog-nav-links li a:hover {
+  color: #fff;
+}
+
+.blog-nav-links li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* BLOG HERO */
+.blog-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #040615;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 100px 6% 60px;
+}
+
+/* Glow de fundo */
+.blog-hero::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(152, 109, 255, 0.08) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+/* Grid de pontos decorativos */
+.blog-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(152, 109, 255, 0.15) 1px,
+    transparent 1px
+  );
+  background-size: 48px 48px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.blog-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  opacity: 0;
+  animation: blogFadeUp 0.9s cubic-bezier(0.34, 1.4, 0.64, 1) 0.2s forwards;
+}
+
+@keyframes blogFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blog-hero-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #986dff;
+  background: rgba(152, 109, 255, 0.1);
+  border: 1px solid rgba(152, 109, 255, 0.25);
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 28px;
+}
+
+.blog-hero-title {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+
+.blog-hero-title span {
+  color: #986dff;
+}
+
+.blog-hero-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 44px;
+}
+
+/* Badge "em desenvolvimento" */
+.blog-wip-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(152, 109, 255, 0.08);
+  border: 1px solid rgba(152, 109, 255, 0.2);
+  border-radius: 50px;
+  padding: 12px 28px;
+  color: #986dff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.blog-wip-dot {
+  width: 8px;
+  height: 8px;
+  background: #986dff;
+  border-radius: 50%;
+  animation: wipPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes wipPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+}
+
+.blog-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  color: #555;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.blog-back-link:hover {
+  color: #986dff;
+}
+
+/* RESPONSIVO BLOG */
+@media screen and (max-width: 992px) {
+  .blog-header {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blog-nav-links {
+    display: none;
+  }
+
+  .blog-hero-title {
+    font-size: 2.2rem;
+  }
+}

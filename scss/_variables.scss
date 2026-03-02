@@ -1,0 +1,41 @@
+// -----------------------------
+// 🎨 Cores
+// -----------------------------
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-main: #986dff;         // Roxo principal
+$color-gray: #c6c6c6;         // Texto secundário
+
+$bg-main: #040615;            // Fundo principal (formulário/seção)
+$bg-secondary: #0c0b16;       // Fundo dos cards
+$bg-border: #17161f;          // Borda padrão dos cards
+
+$shadow-default: 0 0 40px 10px rgba(255, 255, 255, 0.11);
+
+// -----------------------------
+// 📏 Espaçamento
+// -----------------------------
+
+$gap-1: 8px;
+$gap-2: 16px;
+$gap-3: 24px;
+$gap-4: 32px;
+$gap-5: 48px;
+$gap-6: 64px;
+$gap-7: 80px;
+$gap-8: 96px;
+
+// -----------------------------
+// 🔤 Fontes
+// -----------------------------
+
+$font-primary: 'Poppins', sans-serif;
+
+// -----------------------------
+// 📐 Larguras / Tamanhos
+// -----------------------------
+
+$max-container-width: 1200px;
+$container-padding: $gap-3;
