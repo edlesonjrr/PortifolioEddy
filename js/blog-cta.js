@@ -1,9 +1,6 @@
-// blog-cta.js — Animação de entrada + partículas Three.js no desktop
 
 document.addEventListener("DOMContentLoaded", function () {
-  // ============================================
-  // ANIMAÇÃO DE ENTRADA
-  // ============================================
+
 
   const inner = document.querySelector(".blog-cta-inner");
   if (!inner) return;
@@ -23,9 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observer.observe(inner);
 
-  // ============================================
-  // PARTÍCULAS THREE.JS — só desktop
-  // ============================================
+
 
   function initParticlesIfDesktop() {
     if (window.innerWidth < 768) return;

@@ -23,7 +23,6 @@ section.sobre .grid-layout {
   flex: 1 1 40%;
   border-radius: 8px;
   height: auto;
-  /* background-image definido via data-bg no HTML para lazy loading */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
