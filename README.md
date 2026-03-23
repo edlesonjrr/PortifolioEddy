@@ -1,119 +1,188 @@
-# 🚀 Portfólio | Eddy Junior
+<div align="center">
 
-<p align="center">
-  <img src="assets/print.png" alt="Preview do Projeto" width="800">
-</p>
+<img src="assets/favicon_E.png" alt="EddyCode Logo" width="64" />
 
+# EDDYCODE — Portfolio 2.0
 
-> Um portfólio profissional e responsivo, criado para apresentar minhas habilidades como desenvolvedor Frontend e Backend, além de destacar projetos, experiências e formas de contato.
+**A premium, high-performance developer portfolio built with vanilla JavaScript, Three.js, and modern CSS.**
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Portfolio-986dff?style=for-the-badge&logo=vercel&logoColor=white)](https://your-url.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Edleson%20Junior-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/edleson-jr-97734b1a0/)
+[![GitHub](https://img.shields.io/badge/GitHub-edlesonjrr-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/edlesonjrr)
+
+<br/>
+
+<img src="assets/print.png" alt="Portfolio Preview" width="860" style="border-radius:12px" />
+
+</div>
 
 ---
 
-🎯 **Objetivo**  
-Construir uma presença online sólida e impactante, oferecendo aos visitantes uma navegação clara, visual moderno e foco em performance e experiência do usuário.
+## ✨ Overview
 
-🛠️ **Tecnologias utilizadas**
-- HTML5 + CSS3 (SCSS)
-- JavaScript (modularizado)
-- Bootstrap Icons
-- Google Fonts
-- ScrollReveal.js
+This is the personal portfolio of **Edleson Junior (Eddy)** — a Fullstack Developer passionate about creating impactful digital experiences. Built entirely from scratch without UI frameworks, this project reflects real-world skills in performance engineering, 3D rendering, animation, and modular front-end architecture.
 
-## 🧩 Instalação e Execução
+> Designed to impress recruiters, attract freelance clients, and showcase technical depth in under 10 seconds.
 
-Clone o repositório com o seguinte comando:
+---
 
-```bash
-git clone https://github.com/edlesonjrr/PortifolioEddy.git
+## 🚀 Highlights
+
+| Feature | Details |
+|---|---|
+| 🌌 **3D Hero** | Three.js particle system with 3 real Z-depth layers, mouse repulsion, camera parallax and inactivity easter egg |
+| 📊 **Animated Metrics** | CountUp animation triggered by IntersectionObserver — +20 projects, 98 performance score, 3+ years |
+| 🤖 **EddyBot** | Custom chatbot with keyword responses, suggestion buttons and WhatsApp integration |
+| 🧭 **Career Timeline** | Retro-futuristic interactive timeline with scroll animations |
+| 🗂️ **Project Modal** | 8 projects with category filters (Frontend / Backend / Fullstack) |
+| ⭐ **Testimonials** | Infinite CSS-only carousel, GPU-accelerated, paused when off-screen |
+| 💰 **Pricing Modal** | 3-tier pricing cards with WhatsApp CTA per package |
+| 🌍 **i18n** | PT/EN language toggle with typewriter preservation |
+| ⚡ **Performance** | WebP images, deferred scripts, lazy backgrounds, composite-only animations |
+
+---
+
+## 🛠️ Tech Stack
+
+### Core
+- **HTML5** — Semantic, accessible structure
+- **CSS3** — Modular files per section, no frameworks
+- **JavaScript ES6+** — Vanilla, modular, zero dependencies for UI
+
+### 3D & Animation
+- **Three.js** — Hero particle system + 3D model viewer
+- **ScrollReveal.js** — Scroll-triggered entrance animations
+- **CSS Keyframes** — GPU-accelerated infinite animations
+
+### Performance
+- **IntersectionObserver** — Lazy init for heavy sections
+- **WebP** — All images converted and preloaded
+- **`defer`** — All scripts non-blocking
+- **`will-change: transform`** — Compositor-layer hints on animated elements
+- **`transition: specific-property`** — No `transition: all` anywhere
+
+### Deployment
+- **Vercel** — With custom security headers (CSP, X-Frame-Options, Referrer-Policy)
+
+---
+
+## 📁 Project Structure
+
 ```
-## 📁 Estrutura de Pastas
-
-```bash
-Portifolio/
+portfolio/
+│
 ├── assets/
-│   ├── icons/                     # Ícones SVG utilizados nos cards de conhecimento
-│   ├── *.jpg, *.png               # Imagens dos projetos e do perfil
-│   └── edlesonCV.pdf              # Currículo disponível para download
+│   ├── *.webp                  # All images converted to WebP
+│   ├── favicon_E.png
+│   └── edlesonCV.pdf
 │
-├── css/                            # Arquivos CSS organizados por seção
-│   ├── style.css                   # Estilo global
-│   ├── about.css                   # Estilo da seção "Sobre"
-│   ├── skills.css                  # Estilo da seção "Conhecimentos"
-│   └── NavBar.css                  # Estilo do menu de navegação
+├── css/
+│   ├── style.css               # Global styles
+│   ├── NavBar.css              # Navigation bar
+│   ├── about.css               # About section
+│   ├── skills.css              # Skills section
+│   ├── models.css              # 3D models section
+│   ├── hero-2.css              # Hero 2.0 layout & metrics
+│   ├── pricing.css             # Pricing modal
+│   ├── testimonials.css        # Testimonials carousel
+│   ├── blog-cta.css            # Blog CTA section
+│   ├── blog.css                # Blog page styles
+│   └── mobile.css              # Global responsive overrides
 │
-├── js/                             # Scripts JavaScript
-│   ├── main.js                     # Script principal com integração dos efeitos
-│   ├── typeWrite.js                # Efeito de digitação
-│   ├── scrollReveal.js             # Animações de rolagem
-│   ├── hoverChangeDescription.js   # Interação com os cards de conhecimento
-│   └── svg-inject.min.js           # Injeção de SVGs inline
+├── js/
+│   ├── main.js                 # Core init & ScrollReveal
+│   ├── hero-particles.js       # Three.js 3-layer particle system
+│   ├── hero-glow.js            # Photo glow + tilt effect
+│   ├── hero-metrics.js         # CountUp animation
+│   ├── hero-scroll.js          # Scroll-based hero transforms
+│   ├── hero-parallax.js        # Desktop mouse parallax
+│   ├── hero-inactivity.js      # Inactivity easter egg
+│   ├── models-3d.js            # Lazy Three.js model viewer
+│   ├── pricingModal.js         # Pricing modal logic
+│   ├── testimonials.js         # Carousel pause/resume control
+│   ├── blog-cta.js             # Blog CTA entrance animation
+│   ├── chatbot.js              # EddyBot chatbot
+│   ├── popup.js                # Projects modal + filters
+│   ├── timeline.js             # Career timeline popup
+│   ├── translations.js         # i18n strings (PT/EN)
+│   ├── langSwitch.js           # Language toggle logic
+│   ├── lazy-bg.js              # Lazy background images
+│   └── mobile.js               # Mobile-specific behaviors
 │
-├── scss/                           # Estilos em SCSS organizados
-│   ├── _variables.scss             # Variáveis globais
-│   ├── _skills.scss                # Estilo dos cards de conhecimento
-│   └── _style.scss                 # Estilo base global
-│
-└── index.html                      # Página principal do portfólio
+├── blog.html                   # Blog page (in development)
+├── index.html                  # Main portfolio page
+└── vercel.json                 # Security headers config
 ```
 
-## 📌 Descrição
+---
 
-Este é o portfólio profissional de **Edleson Junior**, também conhecido como *Eddy*, um desenvolvedor Frontend e Backend apaixonado por criar experiências digitais impactantes.
+## ⚡ Performance Targets
 
-O site apresenta de forma organizada e moderna os projetos desenvolvidos, especialidades, habilidades técnicas e informações de contato. É ideal para recrutadores, clientes e parceiros conhecerem melhor o trabalho, as competências e os serviços oferecidos como freelancer.
+| Metric | Target |
+|---|---|
+| SEO | 100 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| Performance (Desktop) | 90+ |
+| Performance (Mobile) | Optimizing |
 
-O design foi pensado para transmitir profissionalismo e criatividade, com foco em:
-- Responsividade
-- Acessibilidade
-- Otimização de desempenho
-- Identidade visual forte
-
-## 🧪 Tecnologias Utilizadas
-
-Este projeto foi construído com as seguintes tecnologias e ferramentas:
-
-### 🌐 Frontend
-- **HTML5** — Estrutura semântica e acessível
-- **CSS3 / SCSS** — Estilização customizada, responsiva e modular
-- **JavaScript (ES6+)** — Funcionalidades dinâmicas e interativas
-- **Bootstrap Icons** — Ícones vetoriais prontos para uso
-- **ScrollReveal.js** — Animações suaves ao rolar a página
-- **Typewriter effect** — Efeito de digitação em textos
-
-### 🧠 Conceitos e Boas Práticas
-- Responsividade (Mobile First)
-- Acessibilidade semântica
-- SEO básico
-- Organização modular de arquivos
-- Versionamento com Git
-
-### 💼 Ferramentas
-- **Visual Studio Code**
-- **Git & GitHub**
-- **Figma** (referência visual para design e layout)
-
-## 📬 Contato
-
-Se você quiser entrar em contato comigo para projetos, parcerias ou dúvidas:
-
-- 🌐 Site/Portfólio: [EDDY CODE]()
-- 📧 E-mail: edlesonnew@gmail.com
-- 💼 LinkedIn: [edleson-jr](https://www.linkedin.com/in/edleson-jr-97734b1a0/)
-- 💻 GitHub: [edlesonjrr](https://github.com/edlesonjrr)
+All animations run on **compositor thread only** (transform + opacity).
+No layout-triggering properties animated (`top`, `left`, `width`, etc.).
 
 ---
 
-## 🤝 Contribuindo
+## 🧪 Getting Started
 
-Sinta-se à vontade para abrir **issues**, enviar sugestões ou **pull requests** para melhorias. Toda ajuda é bem-vinda!
+```bash
+# Clone the repository
+git clone https://github.com/edlesonjrr/PortifolioEddy.git
 
-1. Fork este repositório
-2. Crie uma nova branch: `git checkout -b minha-sugestao`
-3. Faça as alterações desejadas
-4. Envie um pull request explicando suas mudanças
+# Open locally (no build step required)
+cd PortifolioEddy
+open index.html
+
+# Or use a local server for best results
+npx serve .
+```
+
+> No build tools, no package managers, no bundlers. Pure web platform.
 
 ---
 
-## 📝 Licença
+## 📬 Contact
 
-Este projeto está sob a licença MIT. Isso significa que você pode usá-lo, modificá-lo e distribuí-lo à vontade. Consulte o arquivo [LICENSE](LICENSE) para mais informações.
+| Channel | Link |
+|---|---|
+| 🌐 Portfolio | [eddycode.vercel.app](https://your-url.vercel.app) |
+| 💼 LinkedIn | [edleson-jr](https://www.linkedin.com/in/edleson-jr-97734b1a0/) |
+| 💻 GitHub | [edlesonjrr](https://github.com/edlesonjrr) |
+| 📧 Email | edlesonnew@gmail.com |
+| 💬 WhatsApp | [+55 81 98722-5748](https://api.whatsapp.com/send/?phone=5581987225748) |
+
+**CNPJ:** 62.720.337/0001-20
+
+---
+
+## 🤝 Contributing
+
+Suggestions and feedback are always welcome!
+
+1. Fork this repository
+2. Create a new branch: `git checkout -b my-suggestion`
+3. Commit your changes
+4. Open a pull request with a clear description
+
+---
+
+## 📝 License
+
+This project is licensed under the **MIT License**.
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+Made with 💜 by **Edleson Junior**
+
+</div>
