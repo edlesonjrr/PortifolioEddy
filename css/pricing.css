@@ -50,9 +50,18 @@
   opacity: 1;
 }
 
-.pricing-modal::-webkit-scrollbar { width: 4px; }
-.pricing-modal::-webkit-scrollbar-track { background: #13121a; }
-.pricing-modal::-webkit-scrollbar-thumb { background: #986dff; border-radius: 4px; }
+.pricing-modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.pricing-modal::-webkit-scrollbar-track {
+  background: #13121a;
+}
+
+.pricing-modal::-webkit-scrollbar-thumb {
+  background: #986dff;
+  border-radius: 4px;
+}
 
 /* CLOSE BUTTON */
 .pricing-close {
@@ -145,7 +154,7 @@
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.4, 0.64, 1),
-              border-color 0.3s ease, box-shadow 0.3s ease;
+    border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pricing-card:hover {
@@ -206,7 +215,10 @@
   margin-bottom: 6px;
 }
 
-/* PREÇO */
+/* ============================================
+   PREÇO — ANIMAÇÃO DE DESCONTO
+   ============================================ */
+
 .pricing-price {
   margin-bottom: 20px;
 }
@@ -215,14 +227,122 @@
   font-size: 0.75rem;
   color: #666;
   display: block;
-  margin-bottom: 2px;
+  margin-bottom: 6px;
 }
 
+/* Wrapper que segura o preço antigo + novo */
+.pricing-price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* PREÇO ANTIGO — riscado */
+.pricing-old-price {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  width: fit-content;
+
+  /* Inicia invisível, entra quando o card fica visible */
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.pricing-card.visible .pricing-old-price {
+  opacity: 1;
+  transform: translateY(0);
+  /* delay maior que o card, para entrar depois que o card aparece */
+  transition-delay: 0.35s;
+}
+
+.pricing-old-price sup {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #555;
+  vertical-align: top;
+  margin-top: 2px;
+  display: inline-block;
+}
+
+.pricing-old-price .old-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #555;
+  position: relative;
+  line-height: 1;
+}
+
+/* A linha que corta — pseudo-elemento animado */
+.pricing-old-price .old-value::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #ff4d6d, #ff6b35);
+  border-radius: 2px;
+  box-shadow: 0 0 6px rgba(255, 77, 109, 0.7);
+
+  /* A linha dispara quando o card fica visible */
+  transition: width 0s;
+}
+
+.pricing-card.visible .pricing-old-price .old-value::after {
+  width: 108%;
+  /* Delay: espera card aparecer (0.35s) + old-price aparecer (~0.3s) */
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1) 0.7s;
+}
+
+/* Badge de desconto */
+.pricing-discount-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 77, 109, 0.12);
+  border: 1px solid rgba(255, 77, 109, 0.3);
+  color: #ff4d6d;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 2px 7px;
+  border-radius: 20px;
+  margin-left: 6px;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.25s ease, transform 0.35s cubic-bezier(0.34, 1.8, 0.64, 1);
+}
+
+/* Badge aparece após a linha cortar */
+.pricing-card.visible .pricing-discount-badge {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 1.08s;
+}
+
+/* PREÇO NOVO — destaque */
 .pricing-value {
   font-size: clamp(1.6rem, 2.5vw, 2rem);
   font-weight: 800;
   color: #fff;
   line-height: 1;
+
+  opacity: 0;
+  transform: translateY(8px) scale(0.94);
+  transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.34, 1.5, 0.64, 1);
+}
+
+.pricing-card.visible .pricing-value {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  /* Aparece junto ao badge, após o corte */
+  transition-delay: 1.0s;
 }
 
 .pricing-value sup {
@@ -234,6 +354,23 @@
   display: inline-block;
 }
 
+/* Label "preço atual" abaixo do valor */
+.pricing-current-label {
+  font-size: 0.68rem;
+  color: #986dff;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pricing-card.visible .pricing-current-label {
+  opacity: 1;
+  transition-delay: 1.2s;
+}
+
 /* PRAZO */
 .pricing-deadline {
   display: inline-flex;
@@ -241,8 +378,8 @@
   gap: 6px;
   font-size: 0.78rem;
   color: #666;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 20px;
   padding: 4px 12px;
   margin-bottom: 24px;
@@ -257,7 +394,7 @@
 /* DIVISOR */
 .pricing-divider {
   height: 1px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.06);
   margin-bottom: 20px;
 }
 
@@ -325,6 +462,136 @@
   transform: scale(1.04);
 }
 
+/* ============================================
+   BANNER DE PAGAMENTO
+   ============================================ */
+
+.pricing-payment-banner {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  background: #13121a;
+  border: 1px solid rgba(152, 109, 255, 0.18);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 28px;
+
+  /* Entrada suave junto com os cards */
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease 0.6s, transform 0.5s cubic-bezier(0.34, 1.4, 0.64, 1) 0.6s;
+}
+
+.pricing-overlay.active .pricing-payment-banner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cada método de pagamento */
+.payment-method {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 24px;
+  position: relative;
+}
+
+/* Divisor central */
+.payment-method:first-child::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 16%;
+  height: 68%;
+  width: 1px;
+  background: rgba(152, 109, 255, 0.15);
+}
+
+/* Ícone do método */
+.payment-method-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.payment-method--pix .payment-method-icon {
+  background: rgba(0, 189, 126, 0.1);
+  border: 1px solid rgba(0, 189, 126, 0.25);
+  color: #00bd7e;
+}
+
+.payment-method--card .payment-method-icon {
+  background: rgba(152, 109, 255, 0.1);
+  border: 1px solid rgba(152, 109, 255, 0.25);
+  color: #986dff;
+}
+
+/* Textos */
+.payment-method-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.payment-method-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.payment-method--pix .payment-method-label {
+  color: #00bd7e;
+}
+
+.payment-method--card .payment-method-label {
+  color: #986dff;
+}
+
+.payment-method-desc {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  line-height: 1.4;
+}
+
+.payment-method-sub {
+  font-size: 0.72rem;
+  color: #666;
+  margin-top: 1px;
+}
+
+/* Badge "sem juros" */
+.payment-badge-nofee {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0, 189, 126, 0.08);
+  border: 1px solid rgba(0, 189, 126, 0.2);
+  color: #00bd7e;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.payment-badge-nofee--card {
+  background: rgba(152, 109, 255, 0.08);
+  border-color: rgba(152, 109, 255, 0.2);
+  color: #986dff;
+}
+
 /* FOOTER NOTE */
 .pricing-note {
   text-align: center;
@@ -364,6 +631,25 @@
   }
 }
 
+@media screen and (max-width: 700px) {
+  .pricing-payment-banner {
+    flex-direction: column;
+  }
+
+  .payment-method:first-child::after {
+    top: auto;
+    bottom: 0;
+    left: 16px;
+    right: 16px;
+    width: auto;
+    height: 1px;
+  }
+
+  .payment-badge-nofee {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .pricing-overlay {
     padding: 0;
@@ -392,5 +678,26 @@
 
   .pricing-header h2 {
     font-size: 1.6rem;
+  }
+
+  /* No mobile reduz delays para não demorar demais */
+  .pricing-card.visible .pricing-old-price {
+    transition-delay: 0.2s;
+  }
+
+  .pricing-card.visible .pricing-old-price .old-value::after {
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+  }
+
+  .pricing-card.visible .pricing-discount-badge {
+    transition-delay: 0.85s;
+  }
+
+  .pricing-card.visible .pricing-value {
+    transition-delay: 0.8s;
+  }
+
+  .pricing-card.visible .pricing-current-label {
+    transition-delay: 1.0s;
   }
 }

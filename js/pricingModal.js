@@ -3,9 +3,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   const overlay = document.querySelector(".pricing-overlay");
-  const modal   = document.querySelector(".pricing-modal");
+  const modal = document.querySelector(".pricing-modal");
   const btnOpen = document.querySelector(".btn-ver-precos");
-  const btnClose= document.querySelector(".pricing-close");
+  const btnClose = document.querySelector(".pricing-close");
   if (!overlay || !modal || !btnOpen) return;
 
   // ============================================
@@ -56,9 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const whatsappNumber = "5581987225748";
 
   const messages = {
-    landing:      "Olá! Vim pelo seu portfólio e tenho interesse no pacote *Landing Page*. Podemos conversar?",
-    institucional:"Olá! Vim pelo seu portfólio e tenho interesse no pacote *Site Institucional*. Podemos conversar?",
-    ecommerce:    "Olá! Vim pelo seu portfólio e tenho interesse no pacote *E-commerce*. Podemos conversar?",
+    landing: "Olá! Vim pelo seu portfólio e tenho interesse no pacote *Landing Page*. Podemos conversar?",
+    institucional: "Olá! Vim pelo seu portfólio e tenho interesse no pacote *Site Institucional*. Podemos conversar?",
+    ecommerce: "Olá! Vim pelo seu portfólio e tenho interesse no pacote *E-commerce*. Podemos conversar?",
   };
 
   document.querySelectorAll(".pricing-cta[data-package]").forEach(btn => {
