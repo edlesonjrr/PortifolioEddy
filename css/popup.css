@@ -405,6 +405,9 @@
 .projeto-card.animate:nth-child(10) {
   animation-delay: 0.75s;
 }
+.projeto-card.animate:nth-child(11) {
+  animation-delay: 0.75s;
+}
 
 /* ============================================
    FILTROS DO POPUP
