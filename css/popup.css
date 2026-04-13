@@ -408,7 +408,12 @@
 .projeto-card.animate:nth-child(11) {
   animation-delay: 0.75s;
 }
-
+.projeto-card.animate:nth-child(12) {
+  animation-delay: 0.75s;
+}
+.projeto-card.animate:nth-child(13) {
+  animation-delay: 0.75s;
+}
 /* ============================================
    FILTROS DO POPUP
    ============================================ */
