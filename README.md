@@ -6,7 +6,7 @@
 
 **A premium, high-performance developer portfolio built with vanilla JavaScript, Three.js, and modern CSS.**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Portfolio-986dff?style=for-the-badge&logo=vercel&logoColor=white)](https://your-url.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Portfolio-986dff?style=for-the-badge&logo=vercel&logoColor=white)](https://portifolio-eddy.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Edleson%20Junior-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/edleson-jr-97734b1a0/)
 [![GitHub](https://img.shields.io/badge/GitHub-edlesonjrr-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/edlesonjrr)
 
@@ -20,9 +20,9 @@
 
 ## ✨ Overview
 
-This is the personal portfolio of **Edleson Junior (Eddy)** — a Fullstack Developer passionate about creating impactful digital experiences. Built entirely from scratch without UI frameworks, this project reflects real-world skills in performance engineering, 3D rendering, animation, and modular front-end architecture.
+This is the personal portfolio of **Edleson Junior (Eddy)** — a Full-Stack Developer with a BSc in Computer Science. Built from scratch without a UI framework, it demonstrates performance-focused front-end engineering, 3D rendering, animation, accessibility, and modular architecture.
 
-> Designed to impress recruiters, attract freelance clients, and showcase technical depth in under 10 seconds.
+> Designed to present selected work, technical strengths, and professional services in a focused interactive experience.
 
 ---
 
@@ -31,10 +31,10 @@ This is the personal portfolio of **Edleson Junior (Eddy)** — a Fullstack Deve
 | Feature | Details |
 |---|---|
 | 🌌 **3D Hero** | Three.js particle system with 3 real Z-depth layers, mouse repulsion, camera parallax and inactivity easter egg |
-| 📊 **Animated Metrics** | CountUp animation triggered by IntersectionObserver — +20 projects, 98 performance score, 3+ years |
+| 📊 **Animated Metrics** | CountUp animation triggered by IntersectionObserver with reduced runtime overhead |
 | 🤖 **EddyBot** | Custom chatbot with keyword responses, suggestion buttons and WhatsApp integration |
 | 🧭 **Career Timeline** | Retro-futuristic interactive timeline with scroll animations |
-| 🗂️ **Project Modal** | 8 projects with category filters (Frontend / Backend / Fullstack) |
+| 🗂️ **Project Modal** | 8 projects with category filters (Front End / Back End / Full Stack) |
 | ⭐ **Testimonials** | Infinite CSS-only carousel, GPU-accelerated, paused when off-screen |
 | 💰 **Pricing Modal** | 3-tier pricing cards with WhatsApp CTA per package |
 | 🌍 **i18n** | PT/EN language toggle with typewriter preservation |
@@ -153,13 +153,10 @@ npx serve .
 
 | Channel | Link |
 |---|---|
-| 🌐 Portfolio | [eddycode.vercel.app](https://your-url.vercel.app) |
+| 🌐 Portfolio | [portifolio-eddy.vercel.app](https://portifolio-eddy.vercel.app) |
 | 💼 LinkedIn | [edleson-jr](https://www.linkedin.com/in/edleson-jr-97734b1a0/) |
 | 💻 GitHub | [edlesonjrr](https://github.com/edlesonjrr) |
 | 📧 Email | edlesonnew@gmail.com |
-| 💬 WhatsApp | [+55 81 98722-5748](https://api.whatsapp.com/send/?phone=5581987225748) |
-
-**CNPJ:** 62.720.337/0001-20
 
 ---
 
